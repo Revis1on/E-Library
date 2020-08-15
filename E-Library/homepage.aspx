@@ -27,8 +27,6 @@
     <li><i class="fa fa-circle-o"></i></li>
     <li><i class="fa fa-circle-o"></i></li>
     <li><i class="fa fa-circle-o"></i></li>
-    <!-- playpause -->
-    <i class="fa playpause fa-pause-circle-o" title="pause"></i>
   </ol>
   <!-- controll -->
   <span class="controll active"></span>
