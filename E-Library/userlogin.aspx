@@ -17,7 +17,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h3>Најава</h3>
+                           <h3></h3>
                         </center>
                      </div>
                   </div>
