@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminauthormenagment.aspx" />
+    <Content Include="adminpublishermenagment.aspx" />
     <Content Include="Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Bootstrap\css\bootstrap-reboot.css" />
@@ -1780,6 +1782,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminauthormenagment.aspx.cs">
+      <DependentUpon>adminauthormenagment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminauthormenagment.aspx.designer.cs">
+      <DependentUpon>adminauthormenagment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminpublishermenagment.aspx.cs">
+      <DependentUpon>adminpublishermenagment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminpublishermenagment.aspx.designer.cs">
+      <DependentUpon>adminpublishermenagment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
