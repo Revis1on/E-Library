@@ -28,13 +28,23 @@
                      </div>
                   </div>
 
+                        <div class="row">
+                       
+                     <div class="col">
+                       <center>
+                         <span class="badge badge-pill badge-info">Информации за Корисникот</span>
+                        </center>
+                     </div>
+                      
+                  </div>
+
                    
                    <div class="row">
                      <div class="col-md-6">
                        
-                         <label>Корисник Име</label>
+                         <label>Име и Презиме</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Внеси корисничко име "></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Внесете Име и Презиме "></asp:TextBox>
                         </div>
 
                      </div>
@@ -54,15 +64,15 @@
                        
                          <label>Број за контакт</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Внеси број " TextMode="Number"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Внесете телефонски број " TextMode="Number"></asp:TextBox>
                         </div>
 
                      </div>
                       <div class="col-md-6">
                        
-                          <label>E-маил</label>
+                          <label>E-мeил</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси e-маил" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси e-мeил" TextMode="Email"></asp:TextBox>
                         </div>
 
                      </div>
@@ -73,7 +83,7 @@
                          <label>Регион</label>
                         <div class="form-group">
                             <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
-                                <asp:ListItem Text="Select" Value="select" />
+                                <asp:ListItem Text="Избери" Value="select" />
 
                             </asp:DropDownList>
                         </div>
@@ -83,30 +93,66 @@
                        
                           <label>Град</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Внеси град" TextMode="Date"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Внеси град" TextMode="SingleLine"></asp:TextBox>
                         </div>
 
                      </div>
                             <div class="col-md-4">
                        
-                          <label>Поштенски број</label>
+                          <label>Поштенски код</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Внеси поштенски број" TextMode="Date"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Внеси поштенски код" TextMode="Number"></asp:TextBox>
+                        </div>
+
+                     </div>
+                  </div>
+                    <div class="row">
+                     <div class="col">
+                       
+                         <label>Адреса на живеење</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Внеси целосна адреса на живеење " TextMode="MultiLine"></asp:TextBox>
+                        </div>
+
+                     </div>
+                  </div>
+
+                   <div class="row">
+                       
+                     <div class="col">
+                       <center>
+                         <span class="badge badge-pill badge-info">Информации за Корисничкиот профил</span>
+                        </center>
+                     </div>
+                      
+                  </div>
+
+                     <div class="row">
+                     <div class="col-md-6">
+                       
+                         <label>Корисничко име</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Внеси корисничко име "></asp:TextBox>
+                        </div>
+
+                     </div>
+                      <div class="col-md-6">
+                       
+                          <label>Лозинка</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Внесете лозинка" TextMode="Password"></asp:TextBox>
                         </div>
 
                      </div>
                   </div>
 
 
+
+
                   <div class="row">
-                     <div class="col">
-                        
-                        
+                     <div class="col">               
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Најава" />
-                        </div>
-                        <div class="form-group">
-                           <a href="usersignup.aspx"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="Регистрација" /></a>
+                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Регистрирај се" />
                         </div>
                      </div>
                   </div>
