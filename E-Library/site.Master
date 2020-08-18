@@ -15,9 +15,9 @@
     <link href="FontAwesome/css/all.css" rel="stylesheet" />
     <%--site css--%>
     <link href="css/site.css" rel="stylesheet" />
+
     <!-- END CSS REGION -->
 
- 
     <!-- #SCRIPT REGION -->
 
     <%--jquery--%>
@@ -29,8 +29,10 @@
     <%--slider js--%>
     <script src="jss/slider.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
     <%--site js--%>
     <script src="jss/site.js"></script>
+
 
     <!-- #END SCRIPT REGION -->
 
