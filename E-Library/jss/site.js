@@ -3,7 +3,9 @@
     $('.slick-slider').bxSlider({
         minSlides: 1,
         maxSlides: 1,
-        controls: false
+        controls: false,
+        auto: true,
+        pause: 8000
     });
 
     $(".explore-button").hover(function () {
@@ -12,5 +14,6 @@
         $(this).parent().removeClass("hovered-card");
     }
     );
+
 
 });

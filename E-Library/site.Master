@@ -14,7 +14,6 @@
     <%--fontawesome css--%>
     <link href="FontAwesome/css/all.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <%--site css--%>
     <link href="css/site.css" rel="stylesheet" />
     <%--slider css--%>
