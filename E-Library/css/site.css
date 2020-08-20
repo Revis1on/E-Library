@@ -224,328 +224,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 /*************footer End*****************/
-
-/************slider********************/
-.main_banner_wrap {
-    height: 492px;
-    background: #ccc;
-}
-
-.main_banner_inner {
-    position: relative;
-    width: 1110px;
-    height: 492px;
-    margin: 0 auto
-}
-
-    .main_banner_inner .banner_link {
-        font-size: 0;
-        z-index: 10;
-        background: #000;
-        opacity: .01;
-        filter: alpha(opacity=0.01)
-    }
-
-.main_banner_big {
-    position: relative;
-    width: 846px;
-    height: 492px
-}
-
-    .main_banner_big .pic {
-        position: absolute;
-        top: 0;
-        right: 0
-    }
-
-    .main_banner_big .banner_link {
-        position: absolute;
-        top: 38px;
-        left: 0;
-        width: 806px;
-        height: 416px
-    }
-
-    .main_banner_big .num {
-        position: absolute;
-        left: 26px;
-        bottom: 64px;
-        font-size: 0;
-        z-index: 20
-    }
-
-    .main_banner_big .ico_pg2 {
-        width: 12px;
-        height: 12px;
-        background-position: -848px -970px;
-        margin-right: 6px
-    }
-
-    .main_banner_big strong.ico_pg2 {
-        background-position: -864px -970px
-    }
-
-.main_banner_small1 {
-    position: absolute;
-    top: 38px;
-    right: 0;
-    width: 314px;
-    height: 208px
-}
-
-    .main_banner_small1 .banner_link {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 302px;
-        height: 198px
-    }
-
-.main_banner_small2 {
-    position: absolute;
-    top: 230px;
-    right: 0;
-    width: 280px;
-    height: 224px
-}
-
-    .main_banner_small2 .banner_link {
-        position: absolute;
-        top: 12px;
-        right: 0;
-        width: 282px;
-        height: 212px
-    }
-/************slider********************/
-.main_banner_wrap {
-    height: 492px;
-    background: #ccc;
-}
-
-.main_banner_inner {
-    position: relative;
-    width: 1110px;
-    height: 492px;
-    margin: 0 auto
-}
-
-    .main_banner_inner .banner_link {
-        font-size: 0;
-        z-index: 10;
-        background: #000;
-        opacity: .01;
-        filter: alpha(opacity=0.01)
-    }
-
-.main_banner_big {
-    position: relative;
-    width: 846px;
-    height: 492px
-}
-
-    .main_banner_big .pic {
-        position: absolute;
-        top: 0;
-        right: 0
-    }
-
-    .main_banner_big .banner_link {
-        position: absolute;
-        top: 38px;
-        left: 0;
-        width: 806px;
-        height: 416px
-    }
-
-    .main_banner_big .num {
-        position: absolute;
-        left: 26px;
-        bottom: 64px;
-        font-size: 0;
-        z-index: 20
-    }
-
-    .main_banner_big .ico_pg2 {
-        width: 12px;
-        height: 12px;
-        background-position: -848px -970px;
-        margin-right: 6px
-    }
-
-    .main_banner_big strong.ico_pg2 {
-        background-position: -864px -970px
-    }
-
-.main_banner_small1 {
-    position: absolute;
-    top: 38px;
-    right: 0;
-    width: 314px;
-    height: 208px
-}
-
-    .main_banner_small1 .banner_link {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 302px;
-        height: 198px
-    }
-
-.main_banner_small2 {
-    position: absolute;
-    top: 230px;
-    right: 0;
-    width: 280px;
-    height: 224px
-}
-
-    .main_banner_small2 .banner_link {
-        position: absolute;
-        top: 12px;
-        right: 0;
-        width: 282px;
-        height: 212px
-    }
-    /*ddd*/
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 60px;
-    color: #333
-}
-
-    h1 a {
-        font-size: 14px;
-        color: #aaa;
-        background: #fff;
-        border-radius: 5px;
-        padding: 2px 5px;
-        border: 1px solid #dcdcdc;
-        text-decoration: none
-    }
-
-        h1 a:hover {
-            color: #0fe0ba;
-            text-decoration: underline
-        }
-
-.slider {
-    width: 100%;
-    max-width: 900px;
-    padding: 30px 40px 0 0px;
-    margin: 25px auto 0;
-    height: 420px;
-    position: relative;
-}
-
-    .slider ul, .slider ul li {
-        width: 100%;
-        height: 100%
-    }
-
-    .slider ul {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px
-    }
-
-        .slider ul li {
-            position: absolute;
-            top: 0px;
-            left: -100%;
-            background-size: cover; /* semon #f98686 */
-            background-position: center;
-            color: #fff;
-            font-family: serif;
-          
-        }
-
-            .slider ul li:first-of-type {
-                background-image: url("http://www.misr5.news/wp-content/uploads/2015/10/6957804-girl-children-blonde-blue-eyes-autumn-mood.jpg")
-            }
-
-            .slider ul li:nth-of-type(2) {
-                background-image: url("http://favim.com/orig/201107/19/cute-flowers-girl-pink-pretty-Favim.com-110225.jpg")
-            }
-
-            .slider ul li:nth-of-type(3) {
-                background-image: url("http://www.tsitut.net/wp-content/uploads/2016/04/born-to-stand-out.jpg")
-            }
-
-            .slider ul li:nth-of-type(4) {
-                background-image: url("https://37.media.tumblr.com/tumblr_lxkb5dtDuF1r5o9ano1_500.jpg")
-            }
-
-            .slider ul li:last-of-type {
-                background-image: url("https://s-media-cache-ak0.pinimg.com/originals/03/08/5f/03085f3adecf31a0ded89aec58e5bbed.jpg")
-            }
-
-    /*.slider .controll {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 44%;
-        border-bottom: 3px solid #333;
-        border-left: 3px solid #333;
-        cursor: pointer;
-        color: #333
-    }
-        */
-
-        .slider .controll:first-of-type {
-            transform: rotate(45deg);
-            left: 20px
-        }
-
-        .slider .controll:last-of-type {
-            transform: rotate(225deg);
-            right: 20px
-        }
-
-        .slider .controll:hover, .slider .controll.active {
-            border-color: #f98686 /* rose */
-        }
-
-    .slider ol {
-        text-align: center;
-        padding-top: 10px
-    }
-
-        .slider ol li {
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-        .slider ol .fa {
-            font-size: 20px;
-            color: #333;
-            cursor: pointer;
-            font-weight: normall
-        }
-
-        .slider ol li:hover .fa:before, .slider ol li.active .fa:before {
-            content: "\f111"
-        }
-/* .slider ul li.active {
-  z-index: 999;
-  left: 0
-} */
-@media(max-width: 490px) {
-    h1 {
-        font-size: 45px
-    }
-}
-
-@media(max-width: 350px) {
-    h1 {
-        font-size: 25px
-    }
-}
-
-    /*********Slider************/
-
-    /************dnevno meni************/
+/************dnevno meni************/
 .main_daily_wrap {
     background: #f4f4f4
 }
@@ -641,41 +320,231 @@ h1 {
             }
 /************dnevno meni************/
 
-#container {
-    position: relative;
-    min-height: 100%
+/*Slider CSS*/
+.main {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-    #container.bg {
-        background: #f5f5f5
+
+.slider {
+    width: 80rem;
+    height: 35rem;
+    box-shadow: 5px 5px 50px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.slider__img {
+    width: 40%;
+    height: 100%;
+    background-color: #333;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.slider__text {
+    height: 50%;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__title {
+    font-size: 3rem;
+    margin: 3rem 3rem;
+}
+
+.slider__content {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__descr {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    letter-spacing: 1px;
+    line-height: 1rem;
+}
+
+.slider__button {
+    font-size: 1.3rem;
+    margin-top: 6rem;
+    margin-left: 13rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn_s {
+    text-decoration: none;
+    color: #da566f;
+    border-bottom: 1px solid #da566f;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 40rem;
+    top: 20rem;
+    left: 9rem;
+}
+
+.button__switch_left {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+
+.button__switch_right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+
+.button__switch_next {
+    transform: rotate(180deg)
+}
+
+.button__slider {
+    width: 3rem;
+    height: 2px;
+    background-color: #BBBCCB;
+    position: relative;
+    transition: .2s all;
+}
+
+    .button__slider::before, .button__slider::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 2px;
+        background-color: #BBBCCB;
+        transition: .2s background;
     }
 
-#content {
-    position: relative;
-    padding: 100px 0 406px
+    .button__slider::before {
+        top: -3px;
+        left: -1px;
+        transform: rotate(-40deg)
+    }
+
+    .button__slider::after {
+        top: 3px;
+        left: -1px;
+        transform: rotate(40deg)
+    }
+
+.button__switch:hover > .button__slider {
+    background-color: #333;
 }
 
-.fr #content {
-    padding: 100px 0 348px
+    .button__switch:hover > .button__slider::before {
+        background-color: #333;
+    }
+
+    .button__switch:hover > .button__slider::after {
+        background-color: #333;
+    }
+
+.button__switch:hover {
+    cursor: pointer;
 }
 
-#content.viewer {
-    position: relative;
-    padding-top: 0
-}
-.aboutus .tit_contacts:before, .aboutus h2, .account_area .alert_area .ico_arr, .account_area .lk_patreon:before, .ads_client .lk_learn_more:after, .ads_client .payment_list .input_radio:checked.input_radio:disabled + .lb_radio:before, .ads_client .payment_wrap .lk_patreon:before, .ads_client .payment_wrap .lk_paypal:before, .ads_client .selected_item:after, .ads_client_confirm_wrap .btn_logo, .age_gate_area .form_area .lk_month:after, .aside.detail .grade_area .ly_grade .star_area a, .aside_area .subscribe_area .subscribe:before, .big_search .search_area .btn_delete, .big_search .search_area .ico_search, .browsebutton .browse-button .before, .browsebutton .browse-over .after .icon_arr, .browsebutton .browse-over .before, .browsebutton.v2 .browse-button .before, .browsebutton.v2 .browse-over .before, .btn_apple, .btn_bgm, .btn_chk, .btn_clse, .btn_clse2, .btn_delete, .btn_delete5, .btn_episode_fd, .btn_facebook, .btn_favorite.on, .btn_foot_facebook, .btn_foot_instagram, .btn_foot_line, .btn_foot_pinterest, .btn_foot_twitter, .btn_foot_youtube, .btn_google, .btn_line, .btn_lineset, .btn_logo, .btn_ly_close, .btn_ly_close3, .btn_search, .btn_top, .btn_twitter, .cont_box .viewer_lst .spi_area .ico_copy, .cont_box .viewer_lst .spi_area .ico_facebook, .cont_box .viewer_lst .spi_area .ico_line, .cont_box .viewer_lst .spi_area .ico_reddit, .cont_box .viewer_lst .spi_area .ico_tumblr, .cont_box .viewer_lst .spi_area .ico_twitter, .contributors_lst a.pg_next em, .contributors_lst a.pg_prev em, .creator_cont .more .ico_more2, .creator_hub_wrap.money .tit_revenue:before, .creator_hub_wrap.started .publish_step .step1:before, .creator_hub_wrap.started .publish_step .step2:before, .creator_hub_wrap.started .publish_step .step3:before, .creator_hub_wrap.started .publish_step .step4:before, .creator_hub_wrap.started .publish_step .step5:before, .creator_hub_wrap.started .publish_step .step6:before, .creator_hub_wrap.started .publish_step .step7:before, .creator_hub_wrap.started .publish_step p:after, .detail_body .detail_paywall .ico_note, .detail_body .detail_paywall .ico_sale, .detail_body .detail_paywall .lk_more:after, .detail_header .ico_copy, .detail_header .ico_facebook, .detail_header .ico_line, .detail_header .ico_reddit, .detail_header .ico_rss, .detail_header .ico_tumblr, .detail_header .ico_twitter, .detail_header.type_white .btn_favorite .ico_plus4, .detail_header.type_white .btn_favorite.on, .detail_header.type_white .ico_copy, .detail_header.type_white .ico_facebook, .detail_header.type_white .ico_info2, .detail_header.type_white .ico_line, .detail_header.type_white .ico_reddit, .detail_header.type_white .ico_rss, .detail_header.type_white .ico_search2, .detail_header.type_white .ico_tumblr, .detail_header.type_white .ico_twitter, .discover_badge_area .badge_discover.num, .discover_cont_area .ico_arr, .discover_spot .paging .btn_next, .discover_spot .paging .btn_prev, .discover_spot .paging .ico_discover_pg, .discover_spot .paging .ico_discover_pg.on, .en .foot_app .foot_down_msg .btn_google, .en .foot_app .foot_down_msg .btn_ios, .episode_lst a.pg_next em, .episode_lst a.pg_prev em, .es .aboutus h2, .es .detail_body .detail_paywall .ico_note, .es .foot_app .foot_down_msg .btn_google, .es .foot_app .foot_down_msg .btn_ios, .es .txt_ico_completed, .es .txt_ico_completed2, .es .txt_ico_hiatus, .es .txt_ico_hiatus2, .es .txt_ico_hot, .es .txt_ico_hot2, .es .txt_ico_new, .es .txt_ico_new2, .es .txt_ico_up, .es .txt_ico_up2, .foot_app .btn_google, .foot_app .btn_ios, .foot_app .ico_qrcode, .fr .detail_body .detail_paywall .ico_note, .fr .foot_app .foot_down_msg .btn_google, .fr .foot_app .foot_down_msg .btn_ios, .fr .txt_ico_completed, .fr .txt_ico_completed2, .fr .txt_ico_hiatus, .fr .txt_ico_hiatus2, .fr .txt_ico_hot, .fr .txt_ico_hot2, .fr .txt_ico_new, .fr .txt_ico_new2, .fr .txt_ico_up, .fr .txt_ico_up2, .history_sns_area .ico_facebook, .history_sns_area .ico_line, .history_sns_area .ico_reddit, .history_sns_area .ico_tumblr, .history_sns_area .ico_twitter, .ico_add, .ico_arr1, .ico_arr2, .ico_arr3, .ico_arr4, .ico_arr5, .ico_arr7, .ico_arr8, .ico_arr9, .ico_arr10, .ico_arr11, .ico_arr12, .ico_arr13, .ico_arr20, .ico_arr21, .ico_arr22, .ico_arr23, .ico_arr24, .ico_arr25, .ico_arr.v3, .ico_bar2, .ico_bgm, .ico_blog, .ico_bookmark, .ico_calendar, .ico_calendar2, .ico_caution, .ico_chart, .ico_chk, .ico_chk2, .ico_chk3, .ico_chk4, .ico_chk5, .ico_chk6, .ico_chk7, .ico_chkbox, .ico_chkbox2, .ico_delete, .ico_edit, .ico_empty_dash, .ico_empty_fav, .ico_etc, .ico_facebook, .ico_foot_logo, .ico_grade2, .ico_grade3, .ico_grade4, .ico_grade5, .ico_hand, .ico_history, .ico_homepage, .ico_info, .ico_info2, .ico_info3, .ico_info4, .ico_info5, .ico_instagram, .ico_lang_arr, .ico_lang_arr2, .ico_like, .ico_like2, .ico_like3, .ico_line, .ico_line2, .ico_lock3, .ico_login, .ico_logo_terms, .ico_menu_new, .ico_money, .ico_mywebtoon, .ico_n1, .ico_n1_big, .ico_n2, .ico_n3, .ico_n4, .ico_n5, .ico_n6, .ico_n7, .ico_n8, .ico_n9, .ico_n10, .ico_next, .ico_nochallenge, .ico_nosearch, .ico_num1, .ico_num1_2, .ico_num2, .ico_num2_2, .ico_num3, .ico_num3_2, .ico_num4_2, .ico_num5_2, .ico_patreon, .ico_patron2, .ico_paypal, .ico_pg, .ico_plus, .ico_plus2, .ico_plus3, .ico_plus4, .ico_pop_arr1, .ico_pop_arr2, .ico_prev, .ico_pub01, .ico_pub02, .ico_pub_arr, .ico_pw_good, .ico_pw_unavailable, .ico_pw_weak, .ico_rate, .ico_rate2, .ico_recently, .ico_search, .ico_search2, .ico_stat, .ico_step_arr1, .ico_subscribe, .ico_tumblr, .ico_twitter, .ico_user, .ico_view, .ico_youtube, .id .foot_app .foot_down_msg .btn_google, .id .foot_app .foot_down_msg .btn_ios, .id .foot_app .ico_qrcode, .id .txt_challenge, .induce_app_area.free .text_area strong:before, .induce_app_area.preview .img_area:before, .induce_app_area.preview.reward .img_area:before, .induce_app_area.subscribe .img_area:before, .lb_chkbox:before, .lb_radio:before, .login_area .logo .btn_logo, .login_with_area .ico_apple, .login_with_area .ico_email, .login_with_area .ico_facebook, .login_with_area .ico_google, .login_with_area .ico_line, .login_with_area .ico_twitter, .loginbox2 .captcha_area .ico_captcha_reload, .ly_ads_pop .pagination .page_next span, .ly_ads_pop .pagination .page_prev span, .ly_area .ico_arr.dn, .ly_area .ico_arr.rt, .ly_area .ico_arr.v2.dn, .ly_area .ico_arr.v2.lt, .ly_area .ico_arr.v2.up, .ly_creator .other_card .ico_nodata, .ly_creator .other_works_more .ico_more, .ly_language .slt_language .chk_wrap .ico_lang .ico_lang_skin, .ly_language .slt_language .lang_en .ico_lang, .ly_language .slt_language .lang_id .ico_lang, .ly_language .slt_language .lang_th .ico_lang, .ly_language .slt_language .lang_tn .ico_lang, .ly_loginbox .btn_clse2, .ly_notyet .dont_view .chk_area .ico_chkbox, .ly_notyet .ver_unofficial .rate .ico_rate, .ly_patron_guide .btn_close, .ly_personal_info .chk_label, .ly_personal_info .lk_close, .ly_redeem_coin .ico_qrcode, .ly_redeem_coin .redeem_code_pop:before, .main_banner_big .ico_pg2, .paginate .pg_next em, .paginate .pg_prev em, .paginate a span.on, .recently_area .menu, .recently_area.unfd .ico_recently, .recently_cont .thmb, .redeem_wrap .ico_apple, .redeem_wrap .ico_email, .redeem_wrap .ico_facebook, .redeem_wrap .ico_google, .redeem_wrap .ico_line, .redeem_wrap .ico_twitter, .redeem_wrap .os_lst .input_radio:checked + .lb_radio:before, .regist_paypal_account .lk_register:after, .select1 .selected.open .ico_arr5, .sign_up_area .btn_apple, .sign_up_area .btn_facebook, .sign_up_area .btn_google, .sign_up_area .btn_line, .sign_up_area .btn_twitter, .snb a .ico_beta, .sta .lk_creators a:before, .submit_contest .ly_area .btn_close, .submit_contest .ly_area .ico_arr.dn, .th .foot_app .foot_down_msg .btn_google, .th .foot_app .foot_down_msg .btn_ios, .th .foot_app .ico_qrcode, .th .txt_challenge, .th .txt_ico_completed, .th .txt_ico_completed2, .th .txt_ico_hiatus, .th .txt_ico_hiatus2, .th .txt_ico_hot, .th .txt_ico_hot2, .th .txt_ico_new, .th .txt_ico_new2, .th .txt_ico_up, .th .txt_ico_up2, .tool_area .logo .btn_logo, .tool_area .paginate.v2 .pg_next.dim em, .tool_area .paginate.v2 .pg_next em, .tool_area .paginate.v2 .pg_prev.dim em, .tool_area .paginate.v2 .pg_prev em, .tool_area .spi_area .ico_copy, .tool_area .spi_area .ico_facebook, .tool_area .spi_area .ico_favorites, .tool_area .spi_area .ico_favorites.on, .tool_area .spi_area .ico_line, .tool_area .spi_area .ico_tumblr, .tool_area .spi_area .ico_twitter, .tw .detail_body .detail_paywall .ico_note, .tw .foot_app .foot_down_msg .btn_google, .tw .foot_app .foot_down_msg .btn_ios, .tw .foot_app .ico_qrcode, .tw .txt_challenge, .tw .txt_ico_completed, .tw .txt_ico_completed2, .tw .txt_ico_hiatus, .tw .txt_ico_hiatus2, .tw .txt_ico_hot, .tw .txt_ico_hot2, .tw .txt_ico_new, .tw .txt_ico_new2, .tw .txt_ico_up, .tw .txt_ico_up2, .txt_challenge, .txt_ico_completed, .txt_ico_completed2, .txt_ico_hiatus, .txt_ico_hiatus2, .txt_ico_hot, .txt_ico_hot2, .txt_ico_new, .txt_ico_new2, .txt_ico_up, .txt_ico_up2, .viewer .challenge_spot_inner .btn_chal_next, .viewer .challenge_spot_inner .btn_chal_prev, .viewer .challenge_spot_inner .paging .ico_pg, .viewer .challenge_spot_inner .paging .ico_pg[href], .viewer_lst .viewer_share_guide .sns_area .ico_copy, .viewer_lst .viewer_share_guide .sns_area .ico_facebook, .viewer_lst .viewer_share_guide .sns_area .ico_reddit, .viewer_lst .viewer_share_guide .sns_area .ico_tumblr, .viewer_lst .viewer_share_guide .sns_area .ico_twitter {
-    background-size: 1055px 1036px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    display: inline-block;
-    vertical-align: top;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden
+.hidden-title {
+    width: 100%;
+    height: 23rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateY(-110%);
+    transition: .3s transform;
 }
 
 
 
+.hidden-descr {
+    width: 100%;
+    height: 20rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateY(-110%);
+    transition: 0.8s transform;
+}
 
+.hidden__img {
+    width: 100%;
+    height: 107%;
+    background-color: #fff;
+    transform: translateY(-110%);
+    transition: .5s transform;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
 
+.hidden-button {
+    width: 100%;
+    height: 5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateY(-110%);
+    transition: transform 1s;
+}
 
+.image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 30% center;
+    position: absolute;
+}
+
+.dribble {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 4rem;
+}
+
+.dribbble-icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 1070px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 45%;
+    }
+
+    .button__slider::before, .button__slider::after {
+        left: 0;
+    }
+}
+
+@media (max-width: 880px) {
+    html {
+        font-size: 37%;
+    }
+    }

@@ -1755,9 +1755,7 @@
     <Content Include="FontAwesome\webfonts\fa-solid-900.svg" />
     <Content Include="Global.asax" />
     <Content Include="homepage.aspx" />
-    <Content Include="Images\bg-01.jpg" />
     <Content Include="Images\icons\favicon.ico" />
-    <Content Include="Images\img-01.png" />
     <Content Include="Images\imgs\bg-01.jpg" />
     <Content Include="Images\books\b1.jpg" />
     <Content Include="Images\books\b2.jpg" />
@@ -1779,7 +1777,7 @@
     <Content Include="Images\imgs\search-online.png" />
     <Content Include="Images\imgs\sign-up.png" />
     <Content Include="Images\imgs\writer.png" />
-    <Content Include="jss\slider.js" />
+    <Content Include="jss\site.js" />
     <Content Include="userlogin.aspx" />
     <Content Include="userprofile.aspx" />
     <Content Include="usersignup.aspx" />

@@ -6,17 +6,26 @@
 <head runat="server">
     <title></title>
     <!-- CSS REGION-->
-
+    
     <%--bootstrap css--%>
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <%--datatables css--%>
     <link href="DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
     <%--fontawesome css--%>
     <link href="FontAwesome/css/all.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <%--site css--%>
     <link href="css/site.css" rel="stylesheet" />
+    <%--slider css--%>
+    <link href="css/slider.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Eczar:700|Gentium+Basic" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
+    
     <!-- END CSS REGION -->
+
 
     <!-- #SCRIPT REGION -->
 
@@ -27,13 +36,9 @@
     <%--bootstrap js--%>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <%--slider js--%>
-    <script src="jss/slider.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
-
-    <%--site js--%>
     <script src="jss/site.js"></script>
-
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js'></script><script  src="./script.js"></script>
     <!-- #END SCRIPT REGION -->
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -42,7 +47,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">
                     <img src="Images/imgs/books.png" width="30" height="30" />
                     Е-Библиотека
