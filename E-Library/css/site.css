@@ -362,13 +362,8 @@ body {
 }
 
 body {
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    font-size: 14px;
-    display: -webkit-box;
-    display: flex;
+    
+
 }
 
 h1 {

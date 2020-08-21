@@ -13,5 +13,15 @@ namespace E_Library
         {
 
         }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("usersignup.aspx");
+        }
+
+        protected void LinkButton6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminmebermenag.aspx");
+        }
     }
 }
