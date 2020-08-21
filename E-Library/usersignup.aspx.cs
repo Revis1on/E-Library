@@ -66,7 +66,7 @@ namespace E_Library
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_table(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@contact_no", TextBox1.Text.Trim());
@@ -80,6 +80,7 @@ namespace E_Library
                 cmd.Parameters.AddWithValue("@account_status", "pending");
                 cmd.ExecuteNonQuery();
                 con.Close();
+
                 Response.Write("<script>alert('Sign Up Successful. Go to User Login to Login');</script>");
             }
             catch (Exception ex)
