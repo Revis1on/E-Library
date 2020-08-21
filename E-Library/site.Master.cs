@@ -19,9 +19,20 @@ namespace E_Library
             Response.Redirect("usersignup.aspx");
         }
 
-        protected void LinkButton6_Click(object sender, EventArgs e)
+        //Кнги//
+        protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("adminmebermenag.aspx");
+
+        }
+        //Одјава//
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Добредојде//
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
