@@ -84,7 +84,6 @@
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="conctact.aspx" />
     <Content Include="css\site.css" />
-    <Content Include="css\slider.css" />
     <Content Include="DataTables\css\dataTables.bootstrap.css" />
     <Content Include="DataTables\css\dataTables.bootstrap.min.css" />
     <Content Include="DataTables\css\dataTables.bootstrap4.css" />

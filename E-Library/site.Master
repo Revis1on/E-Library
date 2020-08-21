@@ -17,11 +17,7 @@
     <%--site css--%>
     <link href="css/site.css" rel="stylesheet" />
     <%--slider css--%>
-    <link href="css/slider.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Eczar:700|Gentium+Basic" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+    
     
     <!-- END CSS REGION -->
 
@@ -35,9 +31,9 @@
     <%--bootstrap js--%>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <%--slider js--%>
-    <script src="jss/site.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js'></script><script  src="./script.js"></script>
+  <script src="jss/site.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js'></script>
     <!-- #END SCRIPT REGION -->
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -57,15 +53,6 @@
                 </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="homepage.aspx">Дома</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">За Нас</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Услови</a>
-                        </li>
  
                     </ul>
  

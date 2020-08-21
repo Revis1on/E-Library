@@ -5,7 +5,7 @@
         maxSlides: 1,
         controls: false,
         auto: true,
-        pause: 8000
+        pause: 6000
     });
 
     $(".explore-button").hover(function () {
