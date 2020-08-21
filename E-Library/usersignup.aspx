@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="E_Library.usersignup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="false" CodeBehind="usersignup.aspx.cs" Inherits="E_Library.usersignup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="container">
+    <div class="container">
       <div class="row">
          <div class="col-md-8 mx-auto">
             <div class="card">
@@ -84,6 +84,10 @@
                         <div class="form-group">
                             <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
                                 <asp:ListItem Text="Избери" Value="select" />
+                                <asp:ListItem Text="Пелагониски" Value="select" />
+                                <asp:ListItem Text="Скопски" Value="select" />
+                                <asp:ListItem Text="Струмички" Value="select" />
+                                <asp:ListItem Text="Тетовски" Value="select" />
 
                             </asp:DropDownList>
                         </div>
@@ -152,7 +156,7 @@
                   <div class="row">
                      <div class="col">               
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Регистрирај се" />
+                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Регистрирај се" OnClick="Button1_Click" />
                         </div>
                      </div>
                   </div>
