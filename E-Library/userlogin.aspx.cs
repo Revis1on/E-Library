@@ -8,5 +8,10 @@ namespace E_Library
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script>alert('клик');</script>");
+        }
     }
 }

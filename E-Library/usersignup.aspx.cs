@@ -81,7 +81,7 @@ namespace E_Library
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                Response.Write("<script>alert('Sign Up Successful. Go to User Login to Login');</script>");
+                Response.Write("<script>alert('Регистрацијата е успешна');</script>");
             }
             catch (Exception ex)
             {
