@@ -37,10 +37,7 @@
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси лозинка" TextMode="Password"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Најава" />
-                        </div>
-                        <div class="form-group">
-                           <a href="usersignup.aspx"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="Регистрација" /></a>
+                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Најава" OnClick="Button1_Click" />
                         </div>
                      </div>
                   </div>

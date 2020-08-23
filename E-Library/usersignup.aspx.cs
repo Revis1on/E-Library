@@ -7,19 +7,20 @@ namespace E_Library
 {
     public partial class usersignup : System.Web.UI.Page
     {
+        // konekcija za baza na podatoci
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        //sign up button click event
+        //kopce za registracija
         protected void Button1_Click(object sender, EventArgs e)
         {
             if (checkMemberExists())
             {
 
-                Response.Write("<script>alert('Member Already Exist with this Member ID, try other ID');</script>");
+                Response.Write("<script>alert('Корисникот постои');</script>");
             }
             else
             {
@@ -27,7 +28,7 @@ namespace E_Library
             }
         }
 
-        // user defined method
+        // proverka dali korisnikot postoi metod
         bool checkMemberExists()
         {
             try
@@ -37,7 +38,7 @@ namespace E_Library
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from member_master_table where member_id='" + TextBox8.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from member_master_tbl where member_id='" + TextBox8.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
