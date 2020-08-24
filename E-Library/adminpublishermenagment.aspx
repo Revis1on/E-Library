@@ -33,7 +33,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ID"></asp:TextBox>
-                                        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Оди" />
+                                        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Оди" OnClick="Button1_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -46,13 +46,13 @@
                         </div>
                         <div class="row">
                             <div class="col-4">
-                                <asp:Button ID="Button2" class="btn btn-lg btn-block btn-success" runat="server" Text="Додај" />
+                                <asp:Button ID="Button2" class="btn btn-lg btn-block btn-success" runat="server" Text="Додај" OnClick="Button2_Click" />
                             </div>
                             <div class="col-4">
-                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Обнови" />
+                                <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Обнови" OnClick="Button3_Click" />
                             </div>
                             <div class="col-4">
-                                <asp:Button ID="Button4" class="btn btn-lg btn-block btn-danger" runat="server" Text="Избриши" />
+                                <asp:Button ID="Button4" class="btn btn-lg btn-block btn-danger" runat="server" Text="Избриши" OnClick="Button4_Click" />
                             </div>
                         </div>
                     </div>

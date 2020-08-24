@@ -35,7 +35,13 @@ namespace E_Library
                     while (dr.Read())
                     {
                         Response.Write("<script>'"+dr.GetValue(8).ToString()+"'</script>");
+                        Session["username"] = dr.GetValue(8).ToString();
+                        Session["fullname"] = dr.GetValue(0).ToString();
+                        Session["role"] = "user";
+                        Session["status"] = dr.GetValue(10).ToString();
                     }
+
+                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {

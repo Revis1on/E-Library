@@ -115,7 +115,7 @@
     <Content Include="adminlogin.aspx" />
     <Content Include="adminmebermenag.aspx" />
     <Content Include="adminpublishermenagment.aspx" />
-    <Content Include="aminbooks.aspx" />
+    <Content Include="adminbooks.aspx" />
     <Content Include="Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Bootstrap\css\bootstrap-reboot.css" />
@@ -1863,12 +1863,12 @@
     <Compile Include="adminpublishermenagment.aspx.designer.cs">
       <DependentUpon>adminpublishermenagment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="aminbooks.aspx.cs">
-      <DependentUpon>aminbooks.aspx</DependentUpon>
+    <Compile Include="adminbooks.aspx.cs">
+      <DependentUpon>adminbooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aminbooks.aspx.designer.cs">
-      <DependentUpon>aminbooks.aspx</DependentUpon>
+    <Compile Include="adminbooks.aspx.designer.cs">
+      <DependentUpon>adminbooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="conctact.aspx.cs">
       <DependentUpon>conctact.aspx</DependentUpon>
