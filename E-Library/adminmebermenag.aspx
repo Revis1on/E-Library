@@ -1,5 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="adminmebermenag.aspx.cs" Inherits="E_Library.adminmebermenag" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+        <%--Datatables js--%>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+        <%--DataTables css--%>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    
+
+
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+           });
+       </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container-fluid">
@@ -32,7 +46,7 @@
                         <div class="form-group">
                            <div class="input-group">
                               <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Корисник ID"></asp:TextBox>
-                              <asp:LinkButton class="btn btn-primary" ID="LinkButton4" runat="server"><i class="fas fa-check-circle"></i></asp:LinkButton>
+                              <asp:LinkButton class="btn btn-primary" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click"><i class="fas fa-check-circle"></i></asp:LinkButton>
                            </div>
                         </div>
                      </div>
@@ -47,18 +61,18 @@
                         <div class="form-group">
                            <div class="input-group">
                               <asp:TextBox CssClass="form-control mr-1" ID="TextBox7" runat="server" placeholder="Статус на Корисникот" ReadOnly="True"></asp:TextBox>
-                              <asp:LinkButton class="btn btn-success mr-1" ID="LinkButton1" runat="server"><i class="fas fa-check-circle"></i></asp:LinkButton>
-                              <asp:LinkButton class="btn btn-warning mr-1" ID="LinkButton2" runat="server"><i class="far fa-pause-circle"></i></asp:LinkButton>
-                              <asp:LinkButton class="btn btn-danger mr-1" ID="LinkButton3" runat="server"><i class="fas fa-times-circle"></i></asp:LinkButton>
+                              <asp:LinkButton class="btn btn-success mr-1" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"><i class="fas fa-check-circle"></i></asp:LinkButton>
+                              <asp:LinkButton class="btn btn-warning mr-1" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"><i class="far fa-pause-circle"></i></asp:LinkButton>
+                              <asp:LinkButton class="btn btn-danger mr-1" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"><i class="fas fa-times-circle"></i></asp:LinkButton>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="row">
                      <div class="col-md-3">
-                        <label>DOB</label>
+                        <label>Дата на Раѓање</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="DOB" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Дата" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
@@ -68,9 +82,9 @@
                         </div>
                      </div>
                      <div class="col-md-5">
-                        <label>Е-меил ID</label>
+                        <label>Е-маил ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Е-меил ID" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Е-маил ID" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -104,7 +118,7 @@
                   </div>
                   <div class="row">
                      <div class="col-8 mx-auto">
-                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Избриши Корисник" />
+                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Избриши Корисник" OnClick="Button2_Click" />
                      </div>
                   </div>
                </div>
@@ -129,7 +143,13 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT * FROM [member_master_tbl]"></asp:SqlDataSource>
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="member_id">
+                            <Columns>
+                                <asp:BoundField DataField="member_id" HeaderText="Корисник ИД" ReadOnly="True" SortExpression="member_id" />
+                                <asp:BoundField DataField="account_status" HeaderText="Акаунт Статус" SortExpression="account_status" />
+                            </Columns>
+                         </asp:GridView>
                      </div>
                   </div>
                </div>

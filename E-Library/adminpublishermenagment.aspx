@@ -1,5 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="adminpublishermenagment.aspx.cs" Inherits="E_Library.adminpublishermenagment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      
+            <%--Datatables js--%>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+        <%--DataTables css--%>
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+      });
+       </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container">
@@ -77,7 +89,14 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibraryDBConnectionString %>" SelectCommand="SELECT * FROM [publisher_master_tbl]"></asp:SqlDataSource>
+                     <div class="col">
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="publisher_id" DataSourceID="SqlDataSource1">
+                           <Columns>
+                              <asp:BoundField DataField="publisher_id" HeaderText="Издавач ИД" ReadOnly="True" SortExpression="publisher_id" />
+                              <asp:BoundField DataField="publisher_name" HeaderText="Издавач Име" SortExpression="publisher_name" />
+                           </Columns>
+                        </asp:GridView>
                             </div>
                         </div>
                     </div>

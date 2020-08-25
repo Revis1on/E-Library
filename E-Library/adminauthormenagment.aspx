@@ -1,16 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="adminauthormenagment.aspx.cs" Inherits="E_Library.adminauthormenagment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script type="text/javascript">
-      $(document).ready(function () {
-      
-          //$(document).ready(function () {
-              //$('.table').DataTable();
-         // });
-      
-          $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
-          //$('.table1').DataTable();
-      });
-    </script>
+
+        <%--Datatables js--%>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+        <%--DataTables css--%>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    
+
+
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+           });
+       </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -90,8 +93,8 @@
                      <div class="col">
                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="author_id" DataSourceID="SqlDataSource1">
                            <Columns>
-                              <asp:BoundField DataField="author_id" HeaderText="author_id" ReadOnly="True" SortExpression="author_id" />
-                              <asp:BoundField DataField="author_name" HeaderText="author_name" SortExpression="author_name" />
+                              <asp:BoundField DataField="author_id" HeaderText="Автор ИД" ReadOnly="True" SortExpression="author_id" />
+                              <asp:BoundField DataField="author_name" HeaderText="Автор Име" SortExpression="author_name" />
                            </Columns>
                         </asp:GridView>
                      </div>
