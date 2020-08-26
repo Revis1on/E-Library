@@ -25,7 +25,14 @@ namespace E_Library
         //add btn
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            if (checkIfBookExists())
+            {
+                Response.Write("<script>alert('Book Already Exists, try some other Book ID');</script>");
+            }
+            else
+            {
+                addNewBook();
+            }
         }
         //upd btn
         protected void Button3_Click(object sender, EventArgs e)

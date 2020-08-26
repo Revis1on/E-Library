@@ -33,7 +33,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img onchange="readURL(this);" height="150px" width="100px" src="Images/imgs/books.png" />
+                           <img id="imgview" Height="150px" Width="100px" src="book_inventory/books1.png" />
                         </center>
                      </div>
                   </div>
@@ -44,7 +44,7 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <asp:FileUpload class="form-control" ID="FileUpload1" runat="server" />
+                        <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload1" runat="server" />
                      </div>
                   </div>
                   <div class="row">
