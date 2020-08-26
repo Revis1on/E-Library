@@ -1809,7 +1809,7 @@
     <Content Include="Images\imgs\adminuser.png" />
     <Content Include="Images\imgs\book-online.png" />
     <Content Include="Images\imgs\books.png" />
-    <Content Include="Images\imgs\books1.png" />
+    <Content Include="book_inventory\books1.png" />
     <Content Include="Images\imgs\defaulters-list.png" />
     <Content Include="Images\imgs\digital-data.png" />
     <Content Include="Images\imgs\digital-inventory.png" />
