@@ -1,7 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="adminbookInventory.aspx.cs" Inherits="E_Library.adminbookInventory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+     <%--Datatables js--%>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+        <%--DataTables css--%>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+
+
+
     <script type="text/javascript">
 
+        $(document).ready(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
  
        function readURL(input) {
            if (input.files && input.files[0]) {
@@ -48,16 +60,20 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-3">
+                     <div class="col-md-6">
                         <label>Книга ID</label>
                         <div class="form-group">
                            <div class="input-group">
                               <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Книга ID"></asp:TextBox>
-                              <asp:LinkButton class="btn btn-primary" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click"><i class="fas fa-check-circle"></i></asp:LinkButton>
+                              <div class="btn-group" role="group">
+                                  <asp:Button class="btn btn-success" ID="Button4" runat="server" Text="Оди" OnClick="Button4_Click" />
+                                  <asp:Button class="btn btn-info" ID="Button5" runat="server" Text="Исчисти" OnClick="Button5_Click" />
+                              </div>
+
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-9">
+                     <div class="col-md-6">
                         <label>Име на Книгата</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Име на Книгата"></asp:TextBox>
@@ -220,30 +236,55 @@
                                                 <div class="col-lg-10">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
                                                         </div>
 
                                                   </div>
                                                     <div class="row">
                                                         <div class="col-12">
 
-                                                        </div>
-
-                                                  </div>
-                                                    <div class="row">
-                                                        <div class="col-12">
-
-                                                        </div>
-
-                                                  </div>
-                                                    <div class="row">
-                                                        <div class="col-12">
+                                                            Автор -
+                                                            <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("author_name") %>'></asp:Label>
+                                                            &nbsp;| Жарн -
+                                                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text='<%# Eval("genre") %>'></asp:Label>
+                                                            &nbsp;| Јазик -
+                                                            <asp:Label ID="Label4" runat="server" Font-Bold="True" Text='<%# Eval("language") %>'></asp:Label>
 
                                                         </div>
 
                                                   </div>
                                                     <div class="row">
                                                         <div class="col-12">
+
+                                                            Издавач -
+                                                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("publisher_name") %>'></asp:Label>
+                                                            &nbsp;| Дата на Издавање -&nbsp;
+                                                            <asp:Label ID="Label6" runat="server" Font-Bold="True" Text='<%# Eval("publish_date") %>'></asp:Label>
+                                                            &nbsp;| Страни -
+                                                            <asp:Label ID="Label7" runat="server" Font-Bold="True" Text='<%# Eval("no_of_pages") %>'></asp:Label>
+                                                            &nbsp;| Издание -
+                                                            <asp:Label ID="Label8" runat="server" Font-Bold="True" Text='<%# Eval("edition") %>'></asp:Label>
+
+                                                        </div>
+
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                            Цена -
+                                                            <asp:Label ID="Label9" runat="server" Font-Bold="True" Text='<%# Eval("book_cost") %>'></asp:Label>
+                                                            &nbsp;| Вистинска Состојба -
+                                                            <asp:Label ID="Label10" runat="server" Font-Bold="True" Text='<%# Eval("actual_stock") %>'></asp:Label>
+                                                            &nbsp;| Моментална Состојба -
+                                                            <asp:Label ID="Label11" runat="server" Font-Bold="True" Text='<%# Eval("current_stock") %>'></asp:Label>
+                                                            &nbsp;</div>
+
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                            Опис -
+                                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Text='<%# Eval("book_description") %>'></asp:Label>
 
                                                         </div>
 

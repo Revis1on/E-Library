@@ -165,7 +165,7 @@ namespace E_Library
                     cmd.ExecuteNonQuery();
                     con.Close();
                     GridView1.DataBind();
-                    Response.Write("<script>alert('Member Status Updated');</script>");
+                    Response.Write("<script>alert('Статусот на Корисникот е обновен');</script>");
 
 
                 }
