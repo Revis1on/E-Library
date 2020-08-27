@@ -219,6 +219,33 @@
                                             <div class="row">
                                                 <div class="col-lg-10">
                                                     <div class="row">
+                                                        <div class="col-12">
+                                                            <asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                                                        </div>
+
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                        </div>
+
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                        </div>
+
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                        </div>
+
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+
+                                                        </div>
 
                                                   </div>
                                                 </div>
