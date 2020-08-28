@@ -59,7 +59,8 @@ namespace E_Library
         //Кнги//
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("viewbooks.aspx");
+                
         }
         //Одјава//
         protected void LinkButton3_Click(object sender, EventArgs e)

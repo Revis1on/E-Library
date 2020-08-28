@@ -40,7 +40,7 @@ namespace E_Library
             }
             else
             {
-                Response.Write("<script>alert('Author does not exist');</script>");
+                Response.Write("<script>alert('Авторот не Постои');</script>");
             }
         }
         //delete
@@ -53,7 +53,7 @@ namespace E_Library
             }
             else
             {
-                Response.Write("<script>alert('Author does not exist');</script>");
+                Response.Write("<script>alert('Авторот не постои');</script>");
             }
         }
         //go
@@ -86,7 +86,7 @@ namespace E_Library
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invalid Author ID');</script>");
+                    Response.Write("<script>alert('Невалиден ID');</script>");
                 }
 
 
@@ -113,7 +113,7 @@ namespace E_Library
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Author Deleted Successfully');</script>");
+                Response.Write("<script>alert('Авторот е избришен');</script>");
                 clearForm();
                 GridView1.DataBind();
 
@@ -140,7 +140,7 @@ namespace E_Library
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Author Updated Successfully');</script>");
+                Response.Write("<script>alert('Податоците се обновени');</script>");
                 clearForm();
                 GridView1.DataBind();
             }
@@ -168,7 +168,9 @@ namespace E_Library
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Author added Successfully');</script>");
+                Response.Write("<div class="alert alert - primary" role="alert">
+  A simple primary alert—check it out !
+</ div > ");
                 clearForm();
                 GridView1.DataBind();
             }

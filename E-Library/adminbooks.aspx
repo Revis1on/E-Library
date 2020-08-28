@@ -39,7 +39,7 @@
                         <div class="form-group">
                            <div class="input-group">
                               <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Книга ID"></asp:TextBox>
-                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Оди" />
+                              <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Оди" OnClick="Button1_Click" />
                            </div>
                         </div>
                      </div>
@@ -74,10 +74,10 @@
                   </div>
                   <div class="row">
                      <div class="col-6">
-                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-primary" runat="server" Text="Издади" />
+                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-primary" runat="server" Text="Издади" OnClick="Button2_Click" />
                      </div>
                      <div class="col-6">
-                        <asp:Button ID="Button4" class="btn btn-lg btn-block btn-success" runat="server" Text="Врати" />
+                        <asp:Button ID="Button4" class="btn btn-lg btn-block btn-success" runat="server" Text="Врати" OnClick="Button4_Click" />
                      </div>
                   </div>
                </div>
