@@ -16,16 +16,50 @@ namespace E_Library
         //go btn
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            getNames();
         }
         // lent btn
         protected void Button2_Click(object sender, EventArgs e)
         {
+            if (checkIfBookExist() && checkIfMemberExist())
+            {
 
+                if (checkIfIssueEntryExist())
+                {
+                    Response.Write("<script>alert('Овај корисник ја има оваа книга');</script>");
+                }
+                else
+                {
+                    issueBook();
+                }
+
+            }
+            else
+            {
+                Response.Write("<script>alert('Погрешна Книга ID или Корисник ID');</script>");
+            }
         }
         //return btn
         protected void Button4_Click(object sender, EventArgs e)
         {
+
+            if (checkIfBookExist() && checkIfMemberExist())
+            {
+
+                if (checkIfIssueEntryExist())
+                {
+                    returnBook();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Непости');</script>");
+                }
+
+            }
+            else
+            {
+                Response.Write("<script>alert('Погрешна Книга ID или Корисник ID');</script>");
+            }
 
         }
 
@@ -45,7 +79,7 @@ namespace E_Library
                 }
 
 
-                SqlCommand cmd = new SqlCommand("Delete from book_issue_table WHERE book_id='" + TextBox1.Text.Trim() + "' AND member_id='" + TextBox2.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("Delete from book_issue_tbl WHERE book_id='" + TextBox1.Text.Trim() + "' AND member_id='" + TextBox2.Text.Trim() + "'", con);
                 int result = cmd.ExecuteNonQuery();
 
                 if (result > 0)
@@ -55,7 +89,7 @@ namespace E_Library
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    Response.Write("<script>alert('Book Returned Successfully');</script>");
+                    Response.Write("<script>alert('Книгата е вратена');</script>");
                     GridView1.DataBind();
 
                     con.Close();
@@ -63,7 +97,7 @@ namespace E_Library
                 }
                 else
                 {
-                    Response.Write("<script>alert('Error - Invalid details');</script>");
+                    Response.Write("<script>alert('Невалидни податоци');</script>");
                 }
 
             }
@@ -83,7 +117,7 @@ namespace E_Library
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO book_issue_table(member_id,member_name,book_id,book_name,issue_date,due_date) values(@member_id,@member_name,@book_id,@book_name,@issue_date,@due_date)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO book_issue_tbl(member_id,member_name,book_id,book_name,issue_date,due_date) values(@member_id,@member_name,@book_id,@book_name,@issue_date,@due_date)", con);
 
                 cmd.Parameters.AddWithValue("@member_id", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@member_name", TextBox3.Text.Trim());
@@ -99,7 +133,7 @@ namespace E_Library
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-                Response.Write("<script>alert('Book Issued Successfully');</script>");
+                Response.Write("<script>alert('Книгата е издадена');</script>");
 
                 GridView1.DataBind();
             }
@@ -147,7 +181,7 @@ namespace E_Library
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("select full_name from member_master_table WHERE member_id='" + TextBox2.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("select full_name from member_master_tbl WHERE member_id='" + TextBox2.Text.Trim() + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -176,7 +210,7 @@ namespace E_Library
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("select * from book_issue_table WHERE member_id='" + TextBox2.Text.Trim() + "' AND book_id='" + TextBox1.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from book_issue_tbl WHERE member_id='" + TextBox2.Text.Trim() + "' AND book_id='" + TextBox1.Text.Trim() + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -217,10 +251,10 @@ namespace E_Library
                 }
                 else
                 {
-                    Response.Write("<script>alert('Wrong Book ID');</script>");
+                    Response.Write("<script>alert('Погрепна Книга ID');</script>");
                 }
 
-                cmd = new SqlCommand("select full_name from member_master_table WHERE member_id='" + TextBox2.Text.Trim() + "'", con);
+                cmd = new SqlCommand("select full_name from member_master_tbl WHERE member_id='" + TextBox2.Text.Trim() + "'", con);
                 da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
                 da.Fill(dt);
@@ -230,7 +264,7 @@ namespace E_Library
                 }
                 else
                 {
-                    Response.Write("<script>alert('Wrong User ID');</script>");
+                    Response.Write("<script>alert('Погрешен корисник ID');</script>");
                 }
 
 

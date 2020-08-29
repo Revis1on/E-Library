@@ -12,6 +12,14 @@ namespace E_Library
 {
     public partial class adminauthormenagment : System.Web.UI.Page
     {
+        public enum WarningType
+        {
+            Success,
+            Info,
+            Warning,
+            Danger,
+            Error
+        }
 
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
@@ -168,9 +176,6 @@ namespace E_Library
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<div class="alert alert - primary" role="alert">
-  A simple primary alert—check it out !
-</ div > ");
                 clearForm();
                 GridView1.DataBind();
             }

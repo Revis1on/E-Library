@@ -1,5 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="adminbooks.aspx.cs" Inherits="E_Library.aminbooks" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+            <%--Datatables js--%>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+        <%--DataTables css--%>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    
+
+
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+           });
+       </script>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -102,7 +118,17 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT [member_id], [member_name], [book_id], [book_name], [issue_date], [due_date] FROM [book_issue_tbl]"></asp:SqlDataSource>
+                        <asp:GridView class="table table-bordered" ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound">
+                            <Columns>
+                                <asp:BoundField DataField="member_id" HeaderText="Корисник ИД" SortExpression="member_id" />
+                                <asp:BoundField DataField="member_name" HeaderText="Име на Корисникот" SortExpression="member_name" />
+                                <asp:BoundField DataField="book_id" HeaderText="Книга ИД" SortExpression="book_id" />
+                                <asp:BoundField DataField="book_name" HeaderText="Име на Книга" SortExpression="book_name" />
+                                <asp:BoundField DataField="issue_date" HeaderText="Дата на Издавање" SortExpression="issue_date" />
+                                <asp:BoundField DataField="due_date" HeaderText="Дата на Враќање" SortExpression="due_date" />
+                            </Columns>
+                         </asp:GridView>
                      </div>
                   </div>
                </div>
