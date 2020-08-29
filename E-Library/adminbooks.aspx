@@ -129,6 +129,7 @@
                                 <asp:BoundField DataField="due_date" HeaderText="Дата на Враќање" SortExpression="due_date" />
                             </Columns>
                          </asp:GridView>
+
                      </div>
                   </div>
                </div>

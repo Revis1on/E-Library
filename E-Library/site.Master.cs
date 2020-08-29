@@ -83,6 +83,7 @@ namespace E_Library
         //Добредојде//
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
+            Response.Redirect("userprofile.aspx");
 
         }
 

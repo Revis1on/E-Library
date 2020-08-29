@@ -38,12 +38,18 @@
                                 <div class="row">
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibraryDBConnectionString %>" SelectCommand="SELECT * FROM [book_master_tbl]"></asp:SqlDataSource>
                                     <div class="col">
-                                        <asp:GridView class="table table-borderless" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BorderColor="White" BorderStyle="None">
+                                        <asp:GridView class="table table-borderless" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BorderColor="White" BorderStyle="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                                             <Columns>
-                                                <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" ShowHeader="False">
+                                                <asp:TemplateField HeaderText="ID" ShowHeader="False" SortExpression="book_id">
+                                                    <EditItemTemplate>
+                                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_id") %>'></asp:Label>
+                                                    </EditItemTemplate>
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="Label14" runat="server" Text='<%# Bind("book_id") %>'></asp:Label>
+                                                    </ItemTemplate>
                                                     <ControlStyle Font-Bold="True" />
                                                     <ItemStyle Font-Bold="True" />
-                                                </asp:BoundField>
+                                                </asp:TemplateField>
                                                 <asp:TemplateField>
                                                     <ItemTemplate>
                                                         <div class="container-fluid">

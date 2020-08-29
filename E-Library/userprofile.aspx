@@ -1,5 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="E_Library.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+                <%--Datatables js--%>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+        <%--DataTables css--%>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    
+
+
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+           });
+       </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
@@ -117,7 +130,7 @@
                      <div class="col-8 mx-auto">
                         <center>
                            <div class="form-group">
-                              <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Зачувај" />
+                              <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Зачувај" OnClick="Button1_Click" />
                            </div>
                         </center>
                      </div>
@@ -132,7 +145,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="Images/imgs/books1.png"/>
+                           <img width="100px" src="Images/icons/book-lent.png" />
                         </center>
                      </div>
                   </div>
@@ -151,6 +164,7 @@
                   </div>
                   <div class="row">
                      <div class="col">
+
                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
                      </div>
                   </div>

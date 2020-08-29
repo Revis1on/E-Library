@@ -12,19 +12,33 @@ namespace E_Library
 {
     public partial class adminauthormenagment : System.Web.UI.Page
     {
-        public enum WarningType
-        {
-            Success,
-            Info,
-            Warning,
-            Danger,
-            Error
-        }
+       
 
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            try
+            {
+
+                if (Session["username"].ToString() == "" || Session["username"] == null)
+                {
+                    Response.Write("<script>alert('Ве молиме најавете се!');</script>");
+                    Response.Redirect("adminlogin.aspx");
+                }
+                else
+                {
+                    Response.Redirect("adminbook.aspx");
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Session Expired Login Again');</script>");
+                Response.Redirect("adminlogin.aspx");
+            }
+
         }
         //add
         protected void Button2_Click(object sender, EventArgs e)
