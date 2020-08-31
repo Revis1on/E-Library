@@ -21,12 +21,14 @@ namespace E_Library
 
         protected void Button_Click(object sender, EventArgs e)
         {
-           
+            Response.Redirect("lentbook.aspx");
         }
+
+      
 
 
         //user defiend methods
-        
+
 
     }
 

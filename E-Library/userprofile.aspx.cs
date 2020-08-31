@@ -15,7 +15,7 @@ namespace E_Library
             {
                 if (Session["username"].ToString() == "" || Session["username"] == null)
                 {
-                    Response.Write("<script>alert('Session Expired Login Again');</script>");
+                    Response.Write("<script>alert('Вашата Сесија е Истечена ! Ве молиме најавете се пак');</script>");
                     Response.Redirect("userlogin.aspx");
                 }
                 else
@@ -32,7 +32,7 @@ namespace E_Library
             catch (Exception ex)
             {
 
-                Response.Write("<script>alert('Session Expired Login Again');</script>");
+                Response.Write("<script>alert('Вашата Сесија е Истечена ! Ве молиме најавете се пак');</script>");
                 Response.Redirect("userlogin.aspx");
             }
         }
@@ -41,7 +41,7 @@ namespace E_Library
         {
             if (Session["username"].ToString() == "" || Session["username"] == null)
             {
-                Response.Write("<script>alert('Session Expired Login Again');</script>");
+                Response.Write("<script>alert('Вашата Сесија е Истечена ! Ве молиме најавете се пак');</script>");
                 Response.Redirect("userlogin.aspx");
             }
             else

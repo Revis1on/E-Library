@@ -31,19 +31,15 @@
                         </div>
                     </div>
                     <br />
-                    <div class="row">
-                        <div class="card">
-                            <div class="card-body">
- 
-                                <div class="row">
+                   <div class="row">
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibraryDBConnectionString %>" SelectCommand="SELECT * FROM [book_master_tbl]"></asp:SqlDataSource>
                                     <div class="col">
-                                        <asp:GridView class="table table-borderless" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BorderColor="White" BorderStyle="None" >
+                                       <asp:GridView class="table table-borderless" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BorderColor="White" BorderStyle="None" >
                                             <Columns>
-                                                <asp:TemplateField HeaderText="ID" ShowHeader="False" SortExpression="book_id">
+                                                <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id">
                                                     <ControlStyle Font-Bold="True" />
                                                     <ItemStyle Font-Bold="True" />
-                                                </asp:TemplateField>
+                                                </asp:BoundField>
                                                 <asp:TemplateField>
                                                     <ItemTemplate>
                                                         <div class="container-fluid">
@@ -51,68 +47,63 @@
                                                                 <div class="col-lg-10">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                   
-                                                                                <asp:TextBox ID="TextBox1" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" Enabled="False" Font-Bold="True" Font-Size="X-Large" Text='<%# Bind("book_name") %>'></asp:TextBox>
-                                                                          
+                                                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-12">
                                                                             <span>Автор - </span>
-                                                                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text='<%# Eval("author_name") %>'></asp:Label>
-                                                                            &nbsp;| <span><span>&nbsp;</span>Жанр - </span>
-                                                                            <asp:Label ID="Label4" runat="server" Font-Bold="True" Text='<%# Eval("genre") %>'></asp:Label>
+                                                                            <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("author_name") %>'></asp:Label>
+                                                                            &nbsp;| <span><span>&nbsp;</span>Жарн - </span>
+                                                                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text='<%# Eval("genre") %>'></asp:Label>
                                                                             &nbsp;|
                                                                             <span>
                                                       Јазик -<span>&nbsp;</span>
-                                                                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("language") %>'></asp:Label>
+                                                                            <asp:Label ID="Label4" runat="server" Font-Bold="True" Text='<%# Eval("language") %>'></asp:Label>
                                                                             </span>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-12">
                                                                             Издавач -
-                                                                            <asp:Label ID="Label6" runat="server" Font-Bold="True" Text='<%# Eval("publisher_name") %>'></asp:Label>
-                                                                            &nbsp;| Дата на Издавање -
-                                                                            <asp:Label ID="Label7" runat="server" Font-Bold="True" Text='<%# Eval("publish_date") %>'></asp:Label>
+                                                                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("publisher_name") %>'></asp:Label>
+                                                                            &nbsp;| Датум на Издавање -
+                                                                            <asp:Label ID="Label6" runat="server" Font-Bold="True" Text='<%# Eval("publish_date") %>'></asp:Label>
                                                                             &nbsp;| Страни -
-                                                                            <asp:Label ID="Label8" runat="server" Font-Bold="True" Text='<%# Eval("no_of_pages") %>'></asp:Label>
+                                                                            <asp:Label ID="Label7" runat="server" Font-Bold="True" Text='<%# Eval("no_of_pages") %>'></asp:Label>
                                                                             &nbsp;| Издание -
-                                                                            <asp:Label ID="Label9" runat="server" Font-Bold="True" Text='<%# Eval("edition") %>'></asp:Label>
+                                                                            <asp:Label ID="Label8" runat="server" Font-Bold="True" Text='<%# Eval("edition") %>'></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-12">
                                                                             Цена -
-                                                                            <asp:Label ID="Label10" runat="server" Font-Bold="True" Text='<%# Eval("book_cost") %>'></asp:Label>
-                                                                            &nbsp;| Вистинска Состојба -
-                                                                            <asp:Label ID="Label11" runat="server" Font-Bold="True" Text='<%# Eval("actual_stock") %>'></asp:Label>
+                                                                            <asp:Label ID="Label9" runat="server" Font-Bold="True" Text='<%# Eval("book_cost") %>'></asp:Label>
+                                                                            &nbsp;| Состојба -
+                                                                            <asp:Label ID="Label10" runat="server" Font-Bold="True" Text='<%# Eval("actual_stock") %>'></asp:Label>
                                                                             &nbsp;| Моментална Состојба -
-                                                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Text='<%# Eval("current_stock") %>'></asp:Label>
+                                                                            <asp:Label ID="Label11" runat="server" Font-Bold="True" Text='<%# Eval("current_stock") %>'></asp:Label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-12">
                                                                             Опис -
-                                                                            <asp:Label ID="Label13" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("book_description") %>'></asp:Label>
+                                                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("book_description") %>'></asp:Label>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
-                                                                        <div class="col-12">
-                                                                            <asp:Button class="btn btn-success" runat="server" Text="Нарачај" OnClick="Button_Click"></asp:Button>
-                                                                          
-                                                                        </div>
-                                                                    </div>
+                                            
                                                                 </div>
                                                                 <div class="col-lg-2">
                                                                     <asp:Image class="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
                                                                 </div>
+                                                                <div class="col-12">
+                                                                            <asp:Button class="btn btn-success" runat="server" Text="Нарачај" OnClick="Button_Click"></asp:Button>
+                                                                          
+                                                                        </div>
                                                             </div>
                                                         </div>
                                                     </ItemTemplate>
-                                                    <ControlStyle BorderColor="White" BorderStyle="None" />
                                                 </asp:TemplateField>
-                                               
                                             </Columns>
                                         </asp:GridView>
                                     </div>
