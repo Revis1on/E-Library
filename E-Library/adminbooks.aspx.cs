@@ -12,27 +12,7 @@ namespace E_Library
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-
-                if (Session["username"].ToString() == "" || Session["username"] == null )
-                {
-                    Response.Write("<script>alert('Ве молиме најавете се!');</script>");
-                    Response.Redirect("adminlogin.aspx");
-                }
-                else
-                {
-                    Response.Redirect("adminbook.aspx");
-                }
-
-
-
-            }
-            catch(Exception ex)
-            {
-                Response.Write("<script>alert('Session Expired Login Again');</script>");
-                Response.Redirect("adminlogin.aspx");
-            }
+          
 
         }
         //go btn
