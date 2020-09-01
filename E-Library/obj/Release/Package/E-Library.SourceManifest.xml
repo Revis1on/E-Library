@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\Package\PackageTmp" />
-  <setAcl path="C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
-</sitemanifest>
