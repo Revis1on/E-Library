@@ -2005,7 +2005,7 @@
     <Content Include="ApplicationInsights.config" />
     <None Include="packages.config" />
     <Content Include="site.Master" />
-    <None Include="Properties\PublishProfiles\E-Library - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\E-Library20200901223800 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
