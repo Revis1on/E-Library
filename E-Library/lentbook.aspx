@@ -9,7 +9,8 @@
                <div class="card-body">
                   <div class="row">
                      <div class="col">
-                         <asp:Image class="img-fluid float-right" Width="100px" ID="Image1" ImageUrl="Images/books/LentBook.png" runat="server" />
+                         
+                         <asp:Image class="img-fluid float-right" Height="180px" Width="130px" ID="Image1" ImageUrl="Images/books/LentBook.png" runat="server" />
                         <div class="row">
                      <div class="col-md-5">
                        <label>Книга ID</label>
@@ -91,23 +92,29 @@
                         </div>
                      </div>
                      <div class="col-md-6">
-                        <label>Е-меил</label>
+                        <label>Е-мaил</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="E-меил" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="E-меил" TextMode="Email" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-6">
+                     <div class="col-md-4">
                         <label>Град</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox6" runat="server" placeholder="Град"></asp:TextBox>
                         </div>
                      </div>
-                     <div class="col-md-6">
+                     <div class="col-md-4">
                         <label>Поштенски код</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="Поштенски код" TextMode="Number"></asp:TextBox>
+                        </div>
+                     </div>
+                      <div class="col-md-4">
+                        <label>Број на порачка</label>
+                        <div class="form-group">
+                           <asp:TextBox class="form-control" ID="TextBox14" runat="server" placeholder="Број" TextMode="Number" ReadOnly ="true"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -124,7 +131,7 @@
                      <div class="col-8 mx-auto">
                         <center>
                            <div class="form-group">
-                              <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Зачувај"  />
+                              <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Зачувај" OnClick="Button1_Click"  />
                            </div>
                         </center>
                      </div>
@@ -158,8 +165,17 @@
                   </div>
                   <div class="row">
                      <div class="col">
-
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:BoundField DataField="member_id" HeaderText="Корисник ИД" SortExpression="member_id" />
+                                <asp:BoundField DataField="member_name" HeaderText="Име на Корисник" SortExpression="member_name" />
+                                <asp:BoundField DataField="book_id" HeaderText="Книга ИД" SortExpression="book_id" />
+                                <asp:BoundField DataField="book_name" HeaderText="Име Книга" SortExpression="book_name" />
+                                <asp:BoundField DataField="issue_date" HeaderText="Дата на Издавање" SortExpression="issue_date" />
+                                <asp:BoundField DataField="due_date" HeaderText="Дата на Враќање" SortExpression="due_date" />
+                            </Columns>
+                         </asp:GridView>
                      </div>
                   </div>
                </div>

@@ -30,6 +30,7 @@ namespace E_Library
                     if (!Page.IsPostBack)
                     {
                         getUserPersonalDetails();
+                        autoGenId();
                     }
 
                 }
@@ -47,7 +48,89 @@ namespace E_Library
             getBookByID();
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            addOrder();
+        }
+
         //user defiend methods
+
+
+
+        void autoGenId()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("Select max(order_id) from book_order_tbl",con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+
+                int bokid = Convert.ToInt32(dr[0]);
+
+                bokid++;
+                TextBox14.Text = bokid.ToString();
+
+
+            }
+            catch(Exception ex)
+            {
+
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
+
+        void addOrder()
+        {
+
+            
+            
+
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO book_order_tbl(username_id,book_id,book_name,full_name,full_address,num_contact,city,postcode,email,order_id) values(@username_id,@book_id,@book_name,@full_name,@full_address,@num_contact,@city,@postcode,@email,@order_id)", con);
+
+                cmd.Parameters.AddWithValue("@username_id", Session["username"]);
+                cmd.Parameters.AddWithValue("@book_id", TextBox8.Text.Trim());
+                cmd.Parameters.AddWithValue("@book_name", TextBox9.Text.Trim());
+                cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
+                cmd.Parameters.AddWithValue("@num_contact", TextBox3.Text.Trim());
+                cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
+                cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
+                cmd.Parameters.AddWithValue("@postcode", TextBox7.Text.Trim());
+                cmd.Parameters.AddWithValue("@email", TextBox12.Text.Trim());
+                cmd.Parameters.AddWithValue("@order_id", TextBox14.Text.Trim());
+
+
+
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Вашаето барање е евидентирано !');</script>");
+
+
+
+            }
+            catch(Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
+
+
         void getUserPersonalDetails()
         {
             try
@@ -167,8 +250,6 @@ namespace E_Library
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-
-
 
 
     }

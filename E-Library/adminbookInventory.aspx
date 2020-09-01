@@ -60,7 +60,7 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-6">
+                     <div class="col-md-5">
                         <label>Книга ID</label>
                         <div class="form-group">
                            <div class="input-group">
@@ -73,7 +73,15 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-6">
+                       <div class="col-md-3">
+                        <label>Нова Книга ID</label>
+                        <div class="form-group">
+                           <div class="input-group">
+                              <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Книга ID" ReadOnly="true"></asp:TextBox>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
                         <label>Име на Книгата</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Име на Книгата"></asp:TextBox>

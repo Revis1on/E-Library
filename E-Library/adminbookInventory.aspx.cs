@@ -23,8 +23,8 @@ namespace E_Library
         protected void Page_Load(object sender, EventArgs e)
         {
 
-       
 
+           // autoGenId();
             fillAuthorPublisherValues();
             GridView1.DataBind();
         }
@@ -65,6 +65,35 @@ namespace E_Library
         }
 
         // user defiend methods
+
+        void autoGenId()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("Select max(book_id) from book_master_tbl", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+
+                int bokid = Convert.ToInt32(dr[0]);
+
+                bokid++;
+                TextBox8.Text = bokid.ToString();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
 
 
         void deleteBookByID()

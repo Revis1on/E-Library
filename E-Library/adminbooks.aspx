@@ -13,8 +13,12 @@
            $(document).ready(function () {
                $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
            });
-       </script>
 
+           $(document).ready(function () {
+               $('table.display').DataTable();
+           });
+       </script>
+    
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -44,19 +48,29 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-6">
+                     <div class="col-md-3">
                         <label>Корисник ID</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Корисник ID"></asp:TextBox>
                         </div>
                      </div>
-                     <div class="col-md-6">
+                     <div class="col-md-4">
                         <label>Книга ID</label>
                         <div class="form-group">
                            <div class="input-group">
                               <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Книга ID"></asp:TextBox>
                               <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Оди" OnClick="Button1_Click" />
                            </div>
+                        </div>
+                     </div>
+                         <div class="col-md-5">
+                        <label>Нарачка</label>
+                        <div class="form-group">
+                            <div class="input-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Корисник ID"></asp:TextBox>
+                            <asp:Button class="btn btn-primary" ID="Button3" runat="server" Text="Оди"/>
+                            <asp:LinkButton class="btn btn-danger mr-1" ID="LinkButton3" runat="server" ><i class="fas fa-times-circle"></i></asp:LinkButton>
+                             </div>
                         </div>
                      </div>
                   </div>
@@ -71,6 +85,28 @@
                         <label>Име на Книга</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Име на Книгата" ReadOnly="True"></asp:TextBox>
+                        </div>
+                     </div>
+                  </div>
+                    <div class="row">
+                     <div class="col-md-6">
+                        <label>Број за контакт</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Број за контакт" ReadOnly= "true" ></asp:TextBox>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Емаил</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Емаил" ReadOnly="true" ></asp:TextBox>
+                        </div>
+                     </div>
+                  </div>
+                    <div class="row">
+                     <div class="col">
+                        <label>Адреса на живеење</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Целосна адреса на живеење" TextMode="MultiLine" Rows="2" ReadOnly ="true"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -129,10 +165,44 @@
                                 <asp:BoundField DataField="due_date" HeaderText="Дата на Враќање" SortExpression="due_date" />
                             </Columns>
                          </asp:GridView>
-
+                     </div>
+                  </div>         
+               </div>        
+            </div>
+         </div>
+           <div class="col-md-7">
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <h4>Листа на издадени книги</h4>
+                        </center>
                      </div>
                   </div>
-               </div>
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT [username_id], [book_id], [book_name], [full_name], [full_address], [num_contact], [order_id], [email] FROM [book_order_tbl]"></asp:SqlDataSource>
+                         <asp:GridView class="table table-bordered" ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="order_id" DataSourceID="SqlDataSource2">
+                             <Columns>
+                                 <asp:BoundField DataField="username_id" HeaderText="username_id" SortExpression="username_id" />
+                                 <asp:BoundField DataField="book_id" HeaderText="book_id" SortExpression="book_id" />
+                                 <asp:BoundField DataField="book_name" HeaderText="book_name" SortExpression="book_name" />
+                                 <asp:BoundField DataField="full_name" HeaderText="full_name" SortExpression="full_name" />
+                                 <asp:BoundField DataField="full_address" HeaderText="full_address" SortExpression="full_address" />
+                                 <asp:BoundField DataField="num_contact" HeaderText="num_contact" SortExpression="num_contact" />
+                                 <asp:BoundField DataField="order_id" HeaderText="order_id" ReadOnly="True" SortExpression="order_id" />
+                                 <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                             </Columns>
+                         </asp:GridView>
+                     </div>
+                  </div>
+               </div>        
             </div>
          </div>
       </div>
