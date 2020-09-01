@@ -20,27 +20,7 @@ namespace E_Library
         {
             getNames();
         }
-        // lent btn
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            if (checkIfBookExist() && checkIfMemberExist())
-            {
-
-                if (checkIfIssueEntryExist())
-                {
-                    Response.Write("<script>alert('Овај корисник ја има оваа книга');</script>");
-                }
-                else
-                {
-                    issueBook();
-                }
-
-            }
-            else
-            {
-                Response.Write("<script>alert('Погрешна Книга ID или Корисник ID');</script>");
-            }
-        }
+     
         //return btn
         protected void Button4_Click(object sender, EventArgs e)
         {
@@ -109,41 +89,6 @@ namespace E_Library
             }
         }
 
-        void issueBook()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(strcon);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-
-                SqlCommand cmd = new SqlCommand("INSERT INTO book_issue_tbl(member_id,member_name,book_id,book_name,issue_date,due_date) values(@member_id,@member_name,@book_id,@book_name,@issue_date,@due_date)", con);
-
-                cmd.Parameters.AddWithValue("@member_id", TextBox2.Text.Trim());
-                cmd.Parameters.AddWithValue("@member_name", TextBox3.Text.Trim());
-                cmd.Parameters.AddWithValue("@book_id", TextBox1.Text.Trim());
-                cmd.Parameters.AddWithValue("@book_name", TextBox4.Text.Trim());
-                cmd.Parameters.AddWithValue("@issue_date", TextBox5.Text.Trim());
-                cmd.Parameters.AddWithValue("@due_date", TextBox6.Text.Trim());
-
-                cmd.ExecuteNonQuery();
-
-                cmd = new SqlCommand("update  book_master_tbl set current_stock = current_stock-1 WHERE book_id='" + TextBox1.Text.Trim() + "'", con);
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
-                Response.Write("<script>alert('Книгата е издадена');</script>");
-
-                GridView1.DataBind();
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-            }
-        }
 
         bool checkIfBookExist()
         {
