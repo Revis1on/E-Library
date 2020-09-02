@@ -1580,6 +1580,7 @@
     <Content Include="Forum\LICENSE.md" />
     <Content Include="Forum\README.md" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\e-lib-yaf - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
