@@ -4,130 +4,180 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-	<div class="slick-slider" >
-  <li>
-  <div class="full-card">
+	<main>
+        <!--? slider Area Start-->
+        <section class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-7 col-md-12">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Online learning<br> platform</h1>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
+                                    <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+        </section>
+        <!-- ? services-area -->
+        <div class="services-area">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon1.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>60+ UX courses</h3>
+                                <p>The automated process all your website tasks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon2.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Expert instructors</h3>
+                                <p>The automated process all your website tasks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="assets/img/icon/icon3.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>Life time access</h3>
+                                <p>The automated process all your website tasks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses area start -->
+        <div class="courses-area section-padding40 fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>Our featured courses</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-actives">
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/featured1.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>User Experience</p>
+                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
+                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
 
-    <div class="font-card robotoslab-card">
-      <h3 class="font--robotoslab">Roboto Slab</h3>
-      <p class="font--roboto">Roboto Slab is a slab serif in the Roboto family. It was designed by Christian Robertson.</p>
-      <a target="_blank" href="https://fonts.google.com/specimen/Roboto+Slab" class="explore-button">Explore</a>
-    </div>
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half"></i>
+                                        </div>
+                                        <p><span>(4.5)</span> based on 120</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$135</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="border-btn border-btn2">Find out more</a>
+                            </div>
 
-    <div class="font-card roboto-card">
-      <h3 class="font--roboto">Roboto</h3>
-      <p class="font--roboto">Roboto is a sans-serif typeface family developed for the mobile operating system, Android.</p>
-      <a target="_blank" href="https://fonts.google.com/specimen/Roboto" class="explore-button">Explore</a>
-    </div>
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>User Experience</p>
+                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
+                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half"></i>
+                                        </div>
+                                        <p><span>(4.5)</span> based on 120</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$135</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="border-btn border-btn2">Find out more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="assets/img/gallery/featured3.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>User Experience</p>
+                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
+                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
 
-    <div class="font-description">
-      <h2 class="font--robotoslab">Roboto Slab<span class="font--roboto">+Roboto</span></h2>
-      <p class="font--roboto">Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves.</p>
-    </div>
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half"></i>
+                                        </div>
+                                        <p><span>(4.5)</span> based on 120</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$135</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="border-btn border-btn2">Find out more</a>
+                            </div>
 
-  </div>
-  </li>
-  
-  <li>
-    <div class="full-card">
-
-    <div class="font-card lobster-card">
-      <h3 class="font--lobster">Lobster</h3>
-      <p class="font--cabin">The new OpenType format gives the possibility to have multiple versions of each letter, and that's exactly it does.</p>
-      <a target="_blank" href="https://fonts.google.com/specimen/Lobster" class="explore-button">Explore</a>
-    </div>
-
-    <div class="font-card cabin-card">
-      <h3 class="font--cabin">Cabin</h3>
-      <p class="font--cabin">The Cabin font family is a humanist sans with 4 weights and true italics. It also features a touch of modernism.</p>
-      <a target="_blank" href="https://fonts.google.com/specimen/Cabin" class="explore-button">Explore</a>
-    </div>
-
-    <div class="font-description">
-      <h2 class="font--lobster">Lobster<span class="font--cabin">+Cabin</span></h2>
-      <p class="font--cabin">Lobster is bold and beautiful while remaining quite readable, attributes not easily found in other scripts. To complement this strong statement, you don’t want anything that competes for attention. Instead pick something plain and simple like Cabin.</p>
-    </div>
-      </li>
-    
-    
-    
-    <li>
-    <div class="full-card">
-
-    <div class="font-card eczar-card">
-      <h3 class="font--eczar">Eczar</h3>
-      <p class="font--gentium">Eczar was designed to bring liveliness and vigor to multi-script typesetting in Latin and Devanagari.</p>
-      <a target="_blank" href="https://fonts.google.com/specimen/Eczar" class="explore-button">Explore</a>
-    </div>
-
-    <div class="font-card gentium-card">
-      <h3 class="font--gentium">Gentium Basic</h3>
-      <p class="font--gentium">The Gentium Basic font family is based on the original Gentium design, but with additional weights.</p>
-      <a target="_blank" href="https://fonts.google.com/specimen/Gentium+Basic" class="explore-button">Explore</a>
-    </div>
-
-    <div class="font-description">
-      <h2 class="font--eczar">Eczar<span class="font--gentium">+Gentium Basic</span></h2>
-      <p class="font--gentium">Pairing two serif typefaces is often considered bad practice, but this is a case where we can get away with breaking the rules of typography. Eczar and Gentium Basic share an extremely similar structure, yet they are different enough to still contrast with one another.</p>
-    </div>
-      </li>
-  </div>
-</div>
-
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 				<!-- //main banner -->
 
-			<!-- Spot -->
-				<div class="main_daily_wrap NE=a:hdy" id="weekdayList">
-					<div class="daily_tab_wrap">
-						<div class="daily_tab_inner">
-							<ul class="daily_tab" id="dailyTab">
-								
-								
-									
-										<li class="" data-weekday="MONDAY"><a href="#" class="btn_daily NPI=a:mon,g:en_en">ПОН</a></li>
-									
-								
-									
-										<li data-weekday="TUESDAY"><a href="#" class="btn_daily NPI=a:tue,g:en_en">ВТО</a></li>
-									
-								
-									
-										<li data-weekday="WEDNESDAY"><a href="#" class="btn_daily NPI=a:wed,g:en_en">СРЕ</a></li>
-									
-								
-									
-										<li data-weekday="THURSDAY"><a href="#" class="btn_daily NPI=a:thu,g:en_en">ЧЕТ</a></li>
-									
-								
-									
-										<li data-weekday="FRIDAY" class="on"><a href="#" class="btn_daily NPI=a:fri,g:en_en">ПЕТ</a></li>
-									
-								
-									
-										<li data-weekday="SATURDAY"><a href="#" class="btn_daily NPI=a:sat,g:en_en">САБ</a></li>
-									
-								
-									
-										<li data-weekday="SUNDAY"><a href="#" class="btn_daily NPI=a:sun,g:en_en">НЕД</a></li>
-									
-								
-									
-								
-							</ul>
-						</div>
-					</div>
-
-					<!-- /Spot -->
-	
-
-
-
-
-        <!-- /content -->
-        </div>
-        <!-- /container -->
-  
-
+			
         
 
 </asp:Content>
