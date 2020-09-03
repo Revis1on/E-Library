@@ -18,7 +18,7 @@
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">E-Библиотека<br> </h1>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">Лесен начин на пристаt до илјадници книги </p>
-                                    <a href="#" class="btnt hero-btnt" data-animation="fadeInLeft" data-delay="0.7s">Регистрирај се !</a>
+                                    <a href="usersignup.aspx" class="btnt hero-btnt" data-animation="fadeInLeft" data-delay="0.7s">Регистрирај се !</a>
                                 </div>
                             </div>
                         </div>

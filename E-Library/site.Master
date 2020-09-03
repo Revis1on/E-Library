@@ -100,7 +100,7 @@
         <div>
           <nav class="navbar navbar-expand-lg text-light " style="background-color: #5c74fc;">
               <a class="navbar-brand" href="homepage.aspx">
-                    <img src="Images/imgs/books.png"  width="30" height="30" />
+                    <img src="Images/imgs/LogoBook.png"  width="50" height="50" />
                     Е-Библиотека
                 </a>
  

@@ -19,10 +19,6 @@
             <div class="row">
  
                 <div class="col-sm-12">
-                    <center>
-                        <h3>
-                        Листа на Книги</h3>
-                    </center>
                     <div class="row">
                         <div class="col-sm-12 col-md-12">
                             <asp:Panel class="alert alert-success" role="alert" ID="Panel1" runat="server" Visible="False">

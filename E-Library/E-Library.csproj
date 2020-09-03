@@ -1966,6 +1966,7 @@
     <Content Include="Images\imgs\defaulters-list.png" />
     <Content Include="Images\imgs\generaluser.png" />
     <Content Include="Images\imgs\library.png" />
+    <Content Include="Images\imgs\LogoBook.png" />
     <Content Include="Images\imgs\publisher.png" />
     <Content Include="Images\imgs\sign-up.png" />
     <Content Include="Images\imgs\writer.png" />
