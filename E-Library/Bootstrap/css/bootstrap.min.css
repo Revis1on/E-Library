@@ -4,6 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap");
 
 :root {
     --blue: #007bff;
@@ -685,9 +686,7 @@ pre {
 .col-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
-    top: 0px;
-    left: 0px;
+    max-width: 100%
 }
 
 .order-first {
@@ -2696,8 +2695,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
     .btn-success:hover {
         color: #fff;
-        background-color: #531eeb;
-        border-color: #531eeb
+        background-color: #5e2ced;
+        border-color: #5e2ced
     }
 
     .btn-success.focus, .btn-success:focus {
@@ -3581,9 +3580,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     flex-wrap: wrap;
     -ms-flex-align: stretch;
     align-items: stretch;
-    width: 100%;
-    top: 0px;
-    left: 0px;
+    width: 100%
 }
 
     .input-group > .custom-file, .input-group > .custom-select, .input-group > .form-control, .input-group > .form-control-plaintext {
@@ -4187,7 +4184,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     flex-wrap: wrap;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
+    font-family: "Mulish",sans-serif;
 }
 
 .nav-link {
@@ -4196,18 +4194,14 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
     .nav-link:focus, .nav-link:hover {
-        text-decoration: none;
-        border-bottom: 2px solid #5e2ced;
+        text-decoration: none
     }
 
-.nav
-}
-
-.nav-link.disabled {
-    color: #6c757d;
-    pointer-events: none;
-    cursor: default
-}
+    .nav-link.disabled {
+        color: #6c757d;
+        pointer-events: none;
+        cursor: default
+    }
 
 .nav-tabs {
     border-bottom: 1px solid #dee2e6
@@ -4224,6 +4218,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     }
 
         .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+            border-color: #e9ecef #e9ecef #dee2e6
         }
 
         .nav-tabs .nav-link.disabled {
@@ -4606,11 +4601,11 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #212529
+    color: rgba(0,0,0,.5)
 }
 
     .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-        color: #212529
+        color: rgba(0,0,0,.7)
     }
 
     .navbar-light .navbar-nav .nav-link.disabled {

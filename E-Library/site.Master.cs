@@ -91,5 +91,9 @@ namespace E_Library
         {
 
         }
+        protected void LinkButton6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("https://yfa-forum-mk.azurewebsites.net");
+        }
     }
 }

@@ -345,7 +345,7 @@ hr {
         background: #ff3500
     }
 
-.btnn {
+.btnt {
     background: #FF9F67;
     font-family: "Josefin Sans",sans-serif;
     text-transform: capitalize;
@@ -371,7 +371,7 @@ hr {
     display: inline-block !important
 }
 
-    .btn::before {
+    .btnt::before {
         content: "";
         position: absolute;
         left: 0;
@@ -389,22 +389,22 @@ hr {
         border-radius: 0px
     }
 
-    .btn:hover {
+    .btnt:hover {
         background-position: right
     }
 
-        .btn:hover::before {
+        .btnt:hover::before {
             transform: scaleX(1);
             color: #fff !important;
             z-index: -1
         }
 
-        .btn:hover.btn3 {
+        .btnt:hover.btn3 {
             background-position: right;
             border: 1px solid transparent
         }
 
-    .btn.btn3 {
+    .btnt.btn3 {
         background: none;
         border: 1px solid #fff;
         margin-left: 20px;
@@ -412,68 +412,68 @@ hr {
         padding: 25px 30px !important
     }
 
-        .btn.btn3::before {
+        .btnt.btn3::before {
             border: 1px solid transparent;
             background: transparent
         }
 
-        .btn.btn3:hover::before {
+        .bttn.btn3:hover::before {
             background: #FF9F67;
             border: 1px solid transparent
         }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .btn.btn3 {
+    .btnt.btn3 {
         margin-left: 0px !important
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .btn.btn3 {
+    .btnt.btn3 {
         margin-left: 0px !important
     }
 }
 
 @media (max-width: 575px) {
-    .btn.btn3 {
+    .btnt.btn3 {
         margin-left: 0px !important
     }
 }
 
-.btn.focus, .btn:focus {
+.btnt.focus, .btnt:focus {
     outline: 0;
     box-shadow: none
 }
 
-.about-btn {
+.about-btnt {
     padding: 19px 97px 19px 20px
 }
 
-.header-btn {
+.header-btnt {
     padding: 30px 57px
 }
 
-.hero-btn {
+.hero-btnt {
     padding: 30px 29px
 }
 
-.white-btn {
+.white-btnt {
     padding: 30px 39px;
     background: #fff;
     color: #072366 !important
 }
 
-    .white-btn::before {
+    .white-btnt::before {
         background: #C86FFF;
         color: #fff !important
     }
 
-.black-btn {
+.black-btnt {
     padding: 14px 35px;
     background: #000
 }
 
-    .black-btn::before {
+    .black-btnt::before {
         background: #331391
     }
 
@@ -484,7 +484,7 @@ hr {
     margin-right: 10px
 }
 
-.cal-btn > p {
+.cal-btnt > p {
     color: #072366 !important;
     font-weight: 700;
     font-size: 16px;
@@ -494,7 +494,7 @@ hr {
     top: -7px
 }
 
-.submit-btn2 {
+.submit-btnt2 {
     background: #FF9F67;
     width: 100%;
     height: 60px;
@@ -507,7 +507,7 @@ hr {
     border-radius: 0px
 }
 
-.btn2 {
+.btnt2 {
     padding: 15px 65px 20px 31px;
     text-transform: capitalize;
     border-radius: 0px;
@@ -520,7 +520,7 @@ hr {
     background: none
 }
 
-.border-btn {
+.border-btnt {
     border: 1px solid #FF9F67;
     color: #FF9F67;
     font-family: "Josefin Sans",sans-serif;
@@ -542,7 +542,7 @@ hr {
     margin: 0
 }
 
-    .border-btn i {
+    .border-btnt i {
         font-size: 16px;
         margin-right: 10px;
         color: #C86FFF;
@@ -552,7 +552,7 @@ hr {
         transition: .3s
     }
 
-    .border-btn::before {
+    .border-btnt::before {
         border: 1px solid transparent;
         content: "";
         position: absolute;
@@ -570,24 +570,24 @@ hr {
         border-radius: 0
     }
 
-    .border-btn:hover::before {
+    .border-btnt:hover::before {
         transform: scaleY(1);
         border: 1px solid transparent;
         color: #fff
     }
 
-    .border-btn.border-btn2 {
+    .border-btnt.border-btn2 {
         width: 100%;
         text-align: center;
         border: 1px solid #E2E4FF;
         color: #4255A4
     }
 
-        .border-btn.border-btn2:hover {
+        .border-btnt.border-btn2:hover {
             color: #fff
         }
 
-.border-btn2 {
+.border-btnt2 {
     width: 100%
 }
 
