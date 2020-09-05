@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="E_Library.homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -8,16 +10,18 @@
         <!-- ? Preloader Start -->
   
         <!--? slider Area Start-->
+         
         <section class="slider-area ">
+            <div class="container">
             <div class="slider-active">
                 <!-- Single Slider -->
                 <div class="single-slider slider-height d-flex align-items-center">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-12">
-                                <div class="hero__caption">
+                                <div class="hero__caption f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">E-Библиотека<br> </h1>
-                                    <p data-animation="fadeInLeft" data-delay="0.4s">Лесен начин на пристаt до илјадници книги </p>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s">Лесен начин на пристап до илјадници книги </p>
                                     <a href="usersignup.aspx" class="btnt hero-btnt" data-animation="fadeInLeft" data-delay="0.7s">Регистрирај се !</a>
                                 </div>
                             </div>
@@ -25,6 +29,7 @@
                     </div>          
                 </div>
             </div>
+                </div>
         </section>
         <!-- ? services-area -->
         <div class="services-area">
@@ -64,7 +69,9 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
+            
         </div>
         
         </main>

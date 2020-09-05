@@ -24,7 +24,7 @@ namespace E_Library
         {
 
 
-           // autoGenId();
+            autoGenId();
             fillAuthorPublisherValues();
             GridView1.DataBind();
         }

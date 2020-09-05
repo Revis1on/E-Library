@@ -98,7 +98,7 @@
 
     <form id="form1" runat="server">
         <div>
-          <nav class="navbar navbar-expand-lg text-light " style="background-color: #5c74fc;">
+          <nav class="navbar navbar-dark navbar-expand-lg text-light " style="background-color: #5c74fc;">
               <a class="navbar-brand" href="homepage.aspx">
                     <img src="Images/imgs/LogoBook.png"  width="50" height="50" />
                     Е-Библиотека
@@ -109,7 +109,7 @@
                 </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                         <li class="nav-item dropdown ">
+                         <li class="nav-item active dropdown ">
                     <asp:LinkButton class="nav-link dropdown-toggle" data-toggle="dropdown" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click">Админ Панел</asp:LinkButton>
                       
                        <div class="dropdown-menu text-blue ">
@@ -132,7 +132,7 @@
                             <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Форум</asp:LinkButton>
                         </li>
                         
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active dropdown">
                     <asp:LinkButton class="nav-link dropdown-toggle" data-toggle="dropdown" ID="LinkButton1" runat="server">Најава</asp:LinkButton>
                       
                        <div class="dropdown-menu">
@@ -174,10 +174,10 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                                <h3 class="f-title f_600 t_color f_size_18">Биди во Тек</h3>
+                                <h3 class="f-title f_600 t_color f_size_18">Биди во тек</h3>
                                 <p>Добиј ги најновите вести</p>
                                 
-                                    <input type="text" name="EMAIL" class="form-control memail" placeholder="Емаил">
+                                    <input type="text" name="EMAIL" class="form-control memail" placeholder="Е-маил">
                                     <button class="btn btn_get btn_get_two" type="submit">Испрати</button>
                                     <p class="mchimp-errmessage" style="display: none;"></p>
                                     <p class="mchimp-sucmessage" style="display: none;"></p>

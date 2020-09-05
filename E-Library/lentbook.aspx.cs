@@ -26,6 +26,7 @@ namespace E_Library
                 else
                 {
                     getUserBookData();
+                    autoGenId();
 
                     if (!Page.IsPostBack)
                     {
@@ -73,8 +74,11 @@ namespace E_Library
 
                 int bokid = Convert.ToInt32(dr[0]);
 
+
+
                 bokid++;
-                TextBox14.Text = bokid.ToString();
+
+                TextBox14.Text =  bokid.ToString();
 
 
             }

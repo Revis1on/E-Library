@@ -10,7 +10,7 @@
                   <div class="row">
                      <div class="col">
                          
-                         <asp:Image class="img-fluid float-right" Height="180px" Width="130px" ID="Image1" ImageUrl="Images/books/LentBook.png" runat="server" />
+                         <asp:Image class="img-fluid float-right" Height="150px" Width="150px" ID="Image1" ImageUrl="Images/books/LentBook.png" runat="server" />
                         <div class="row">
                      <div class="col-md-5">
                        <label>Книга ID</label>
@@ -32,7 +32,7 @@
                      <div class="col-md-5">
                         <label>Автор</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Име" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Име на Автор" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-5">
