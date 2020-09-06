@@ -265,6 +265,8 @@ namespace E_Library
         {
             try
             {
+
+
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
                 {
