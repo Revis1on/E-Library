@@ -22,7 +22,7 @@ namespace E_Library
         protected void Button_Click(object sender, EventArgs e)
         {
             Response.Redirect("lentbook.aspx");
-         
+
         }
 
         protected void Button_Click1(object sender, EventArgs e)
@@ -31,13 +31,23 @@ namespace E_Library
 
         }
 
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            GridViewRow row = (GridViewRow)(((Control)e.CommandSource).NamingContainer);
+            HiddenField bookID = (HiddenField)row.FindControl("book_id");
+
+            Session["bkid"] = bookID;
+        }
+
+
+
 
 
 
         //user defiend methods
 
 
+
+
     }
-
-
 }

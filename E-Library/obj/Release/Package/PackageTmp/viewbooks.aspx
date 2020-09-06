@@ -12,6 +12,10 @@
         $(document).ready(function () {
             $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
         });
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -31,7 +35,7 @@
                 <div class="row">
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibraryDBConnectionString %>" SelectCommand="SELECT * FROM [book_master_tbl]"></asp:SqlDataSource>
                     <div class="col">
-                        <asp:GridView class="table table-borderless" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BorderColor="White" BorderStyle="None">
+                        <asp:GridView class="table table-borderless" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1" BorderColor="White" BorderStyle="None" OnRowCommand="GridView1_RowCommand">
                             <Columns>
                                 <asp:BoundField DataField="book_id" ReadOnly="True" SortExpression="book_id">
                                     <ControlStyle Font-Bold="True" />
@@ -42,13 +46,14 @@
                                         <div class="container-fluid">
                                                 <div class="shadow p-3 mb-5 bg-white rounded row">
                                                     <div class="col-lg-10">
-                                                        <div class="row">
+                                                        <div class="row border-bottom">
                                                             <div class="col-12">
                                                                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                                                                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# Eval("book_id") %>' />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
+                                                        <div class="row border-bottom">
+                                                            <div class="col-12 mt-2 mb-2">
                                                                 <span>Автор - </span>
                                                                 <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("author_name") %>'></asp:Label>
                                                                 &nbsp;| <span><span>&nbsp;</span>Жарн - </span>
@@ -59,8 +64,8 @@
                                                                             </span>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
+                                                        <div class="row border-bottom">
+                                                            <div class="col-12 mt-2 mb-2">
                                                                 Издавач -
                                                                             <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("publisher_name") %>'></asp:Label>
                                                                 &nbsp;| Датум на Издавање -
@@ -72,7 +77,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-12">
+                                                            <div class="col-12 mt-2 mb-2">
                                                                 Цена -
                                                                             <asp:Label ID="Label9" runat="server" Font-Bold="True" Text='<%# Eval("book_cost") %>'></asp:Label>
                                                                 &nbsp;| Состојба -
@@ -81,18 +86,19 @@
                                                                             <asp:Label ID="Label11" runat="server" Font-Bold="True" Text='<%# Eval("current_stock") %>'></asp:Label>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
+                                                        <div class="row border">
+                                                            <div class="col-12 mt-2 mb-2">
                                                                 Опис -
-                                                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("book_description") %>'></asp:Label>
+                                                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Font-Italic="false" Font-Size="Smaller" Text='<%# Eval("book_description") %>'></asp:Label>              
+
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-lg-2">
-                                                        <asp:Image class="img-fluid " ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
+                                                    <div class="col-lg-2 ">
+                                                        <asp:Image class="img-fluid border " ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
                                                     </div>
-                                                    <div class="col-12">
+                                                    <div class="col-12 mt-3">
                                                         <div class="btn-group" role="group">
                                                         <asp:Button class="btn btn-primary" runat="server" Text="Нарачај" OnClick="Button_Click"></asp:Button>
                                                         <asp:Button class="btn btn-info" runat="server" Text="Превземи" OnClick="Button_Click1"></asp:Button>
@@ -109,10 +115,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-    <center>
+                         <center>
                     <a href="homepage.aspx">
                         << Назад</a><span class="clearfix"></span>
                             <br />

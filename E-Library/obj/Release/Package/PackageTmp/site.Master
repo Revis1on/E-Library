@@ -98,6 +98,7 @@
 
     <form id="form1" runat="server">
         <div>
+
           <nav class="navbar navbar-dark navbar-expand-lg text-light " style="background-color: #5c74fc;">
               <a class="navbar-brand" href="homepage.aspx">
                     <img src="Images/imgs/LogoBook.png"  width="50" height="50" />
