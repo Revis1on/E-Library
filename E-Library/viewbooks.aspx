@@ -100,7 +100,7 @@
                                                         <div class="row">
                                                             <div class="col-12">                                                           
                                                                 <asp:Label ID="Label12"  runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("book_description").ToString().Length > 250 ? Eval("book_description").ToString().Substring(0,250) : Eval("book_description") %>'  ></asp:Label>
-                                                                <asp:LinkButton ID="LinkButton1" CommandName="viewPopup" data-toggle="modal" data-target="#exampleModal" runat="server">LinkButton</asp:LinkButton>
+                                                                <asp:HyperLink ID="HyperLink1" runat="server" href="#popup" onClick="   >HyperLink</asp:HyperLink>
                                                             </div>
                                                         </div>
 
@@ -125,81 +125,23 @@
                 </div>
             </div>
         </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <div class="container-fluid">
-                                                <div class="shadow p-3 mb-5 bg-white rounded row">
-                                                    <div class="col-lg-10">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <asp:Label ID="Label14" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
-                                                                <asp:HiddenField ID="hidID" runat="server" Value='<%# Eval("book_id") %>' />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <span>Автор - </span>
-                                                                <asp:Label ID="Label2" runat="server" Font-Bold="True" Text='<%# Eval("author_name") %>'></asp:Label>
-                                                                &nbsp;| <span><span>&nbsp;</span>Жарн - </span>
-                                                                <asp:Label ID="Label3" runat="server" Font-Bold="True" Text='<%# Eval("genre") %>'></asp:Label>
-                                                                &nbsp;|
-                                                                            <span>Јазик -<span>&nbsp;</span>
-                                                                                <asp:Label ID="Label4" runat="server" Font-Bold="True" Text='<%# Eval("language") %>'></asp:Label>
-                                                                            </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                Издавач -
-                                                                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("publisher_name") %>'></asp:Label>
-                                                                &nbsp;| Датум на Издавање -
-                                                                            <asp:Label ID="Label6" runat="server" Font-Bold="True" Text='<%# Eval("publish_date") %>'></asp:Label>
-                                                                &nbsp;| Страни -
-                                                                            <asp:Label ID="Label7" runat="server" Font-Bold="True" Text='<%# Eval("no_of_pages") %>'></asp:Label>
-                                                                &nbsp;| Издание -
-                                                                            <asp:Label ID="Label8" runat="server" Font-Bold="True" Text='<%# Eval("edition") %>'></asp:Label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                Цена -
-                                                                            <asp:Label ID="Label9" runat="server" Font-Bold="True" Text='<%# Eval("book_cost") %>'></asp:Label>
-                                                                &nbsp;| Состојба -
-                                                                            <asp:Label ID="Label10" runat="server" Font-Bold="True" Text='<%# Eval("actual_stock") %>'></asp:Label>
-                                                                &nbsp;| Моментална Состојба -
-                                                                            <asp:Label ID="Label11" runat="server" Font-Bold="True" Text='<%# Eval("current_stock") %>'></asp:Label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12">                                                           
-                                                                <asp:Label ID="Label12"  runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("book_description").ToString().Length > 250 ? Eval("book_description").ToString().Substring(0,250) : Eval("book_description") %>'  ></asp:Label>
-                                                      
-                                                            </div>
-                                                        </div>
+    </div>
 
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <asp:Image class="img-fluid " ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
-                                                    </div>
-                                                </div>
-                                            </div>
+    <div class="ccontainer">
+  <a class="button" href="#popup">Open Modal</a>
+  <div class="popup" id="popup">
+    <div class="popup-inner">
+      <div class="popup__photo">
+        <asp:Image class="img-fluid " ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="popup__text">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.</p>
       </div>
+      <a class="popup__close" href="#">X</a>
     </div>
   </div>
 </div>
-    </div>
 
     <center>
                     <a href="homepage.aspx">
