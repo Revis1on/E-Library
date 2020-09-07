@@ -89,8 +89,9 @@
                                                         <div class="row border">
                                                             <div class="col-12 mt-2 mb-2">
                                                                 Опис -
-                                                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Font-Italic="false" Font-Size="Smaller" Text='<%# Eval("book_description") %>'></asp:Label>              
-
+                                                              
+                                                                            <asp:Label ID="Label12" Text='<%# Eval("book_description").ToString().PadRight(200).Substring(0,200).TrimEnd() %>' runat="server" Font-Bold="True" Font-Italic="false" Font-Size="Smaller" ></asp:Label>              
+                                                                            <asp:LinkButton ID="LinkButton1" runat="server" href="#popup" CommandName="Detail" CommandArgument="<%# Container.DataItemIndex  %>" >....Прочитајте Повеќе</asp:LinkButton>
                                                             </div>
                                                         </div>
 
@@ -116,6 +117,21 @@
             </div>
         </div>
     </div>
+    <div class="popup" id="popup">
+    <div class="popup-inner">
+      <div class="popup__photo">
+        <img src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80" alt="">
+      </div>
+      <div class="popup__text">
+            <div class="row">
+            <div class="col-12 mt-2 mb-2">
+                <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
+                </div>
+                </div>
+            </div>
+            <a class="popup__close" href="#">X</a>
+        </div>
+  </div>
                          <center>
                     <a href="homepage.aspx">
                         << Назад</a><span class="clearfix"></span>
