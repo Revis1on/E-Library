@@ -48,8 +48,8 @@
                                                     <div class="col-lg-10">
                                                         <div class="row border-bottom">
                                                             <div class="col-12">
+                                                                
                                                                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
-                                                                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# Eval("book_id") %>' />
                                                             </div>
                                                         </div>
                                                         <div class="row border-bottom">
@@ -100,8 +100,8 @@
                                                     </div>
                                                     <div class="col-12 mt-3">
                                                         <div class="btn-group" role="group">
-                                                        <asp:Button class="btn btn-primary" runat="server" Text="Нарачај" OnClick="Button_Click"></asp:Button>
-                                                        <asp:Button class="btn btn-info" runat="server" Text="Превземи" OnClick="Button_Click1"></asp:Button>
+                                                        <asp:Button class="btn btn-primary" runat="server" CommandName="Order" CommandArgument="<%# Container.DataItemIndex  %>" Text="Нарачај" ></asp:Button>
+                                                        <asp:Button class="btn btn-info" runat="server"  CommandName ="Downnload"  Text="Превземи" OnClick="Button_Click1"></asp:Button>
 
                                                             </div>
                                                     </div>

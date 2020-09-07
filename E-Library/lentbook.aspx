@@ -9,19 +9,19 @@
                <div class="card-body">
                   <div class="row">
                      <div class="col">
-                         
-                         <asp:Image class="img-fluid float-right" Height="150px" Width="150px" ID="Image1" ImageUrl="Images/books/LentBook.png" runat="server" />
+                        
+                         <asp:Image class="img-fluid float-right " Height="230px" Width="150px" ID="Image1" ImageUrl="Images/books/LentBook.png" runat="server" />
+
                         <div class="row">
-                     <div class="col-md-5">
+                     <div class="col-md-2">
                        <label>Книга ID</label>
                         <div class="form-group">
                            <div class="input-group">
-                              <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Книга ID"></asp:TextBox>
-                              <asp:Button class="btn btn-primary" ID="Button2" runat="server" Text="Оди" OnClick="Button2_Click"/>
+                              <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Книга ID" ReadOnly="true"></asp:TextBox>
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-5">
+                     <div class="col-md-8">
                         <label>Име на Книга</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Име"  ReadOnly="True"></asp:TextBox>
@@ -49,21 +49,22 @@
                            <asp:TextBox class="form-control" ID="TextBox11" runat="server" placeholder="Име" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
-                     <div class="col-md-5">
+                     <div class="col-md-2">
                         <label>Состојба</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox13" runat="server" placeholder="Состојба" ReadOnly="True"></asp:TextBox>
+                        </div>
+                     </div>
+                              <div class="col-md-3">
+                        <label>Цена</label>
+                        <div class="form-group">
+                           <asp:TextBox class="form-control" ID="TextBox3" runat="server" placeholder="Состојба" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
                   </div>
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col">
-                        <center>
-                           <h4>Кориснички Информации</h4>
-                        </center>
-                     </div>
                   </div>
                   <div class="row">
                      <div class="col">
@@ -71,62 +72,25 @@
                      </div>
                   </div>
                   <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <label>Кориснички ID</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox12" runat="server" placeholder="Кориснички ID" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
-                     <div class="col-md-6">
+                     <div class="col-md-4">
                         <label>Име и Презиме</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Име и Презиме" ReadOnly="true"></asp:TextBox>
                         </div>
                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-6">
-                        <label>Телефонски број за контакт</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Телефонски број за контакт" TextMode="Number"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <label>Е-мaил</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="E-меил" TextMode="Email" ReadOnly="true"></asp:TextBox>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-4">
-                        <label>Град</label>
-                        <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox6" runat="server" placeholder="Град"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Поштенски код</label>
-                        <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="Поштенски код" TextMode="Number"></asp:TextBox>
-                        </div>
-                     </div>
-                      <div class="col-md-4">
+                        <div class="col-md-4">
                         <label>Број на порачка</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox14" runat="server" placeholder="Број" TextMode="Number" ReadOnly ="true"></asp:TextBox>
                         </div>
                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="col">
-                        <label>Адреса на живеење</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Целосна адреса на живеење" TextMode="MultiLine" Rows="2"></asp:TextBox>
-                        </div>
-                     </div>
-                  </div>
-          
+                  </div>        
                   <div class="row">
                      <div class="col-8 mx-auto">
                         <center>

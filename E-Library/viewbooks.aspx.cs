@@ -19,27 +19,31 @@ namespace E_Library
 
         }
 
-        protected void Button_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("lentbook.aspx");
-
-        }
 
         protected void Button_Click1(object sender, EventArgs e)
-        {
+        {   
             Response.Redirect("lentbook.aspx");
 
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            GridViewRow row = (GridViewRow)(((Control)e.CommandSource).NamingContainer);
-            HiddenField bookID = (HiddenField)row.FindControl("book_id");
 
-            Session["bkid"] = bookID;
+            if (e.CommandName == "Order")
+            {
+                //Determine the RowIndex of the Row whose Button was clicked.
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+
+                //Reference the GridView Row.
+                GridViewRow row = GridView1.Rows[rowIndex];
+
+                string id = row.Cells[0].Text;
+
+                Session["id"] = id;
+                Response.Redirect("lentbook.aspx");
+            }
+
         }
-
-
 
 
 

@@ -3050,7 +3050,8 @@ hr {
     background-image: url(../img/hero/h1_hero.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center
+    background-position: center center ;
+    object-fit: fill
 }
 
     .slider-area.slider-area2, .slider-area2.slider-area2 {

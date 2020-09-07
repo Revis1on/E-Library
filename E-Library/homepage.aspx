@@ -10,8 +10,8 @@
         <!-- ? Preloader Start -->
   
         <!--? slider Area Start-->
-         
-        <section class="slider-area ">
+       
+        <section class="slider-area img-fluid">
             <div class="container">
             <div class="slider-active">
                 <!-- Single Slider -->
@@ -31,6 +31,7 @@
             </div>
                 </div>
         </section>
+            
         <!-- ? services-area -->
         <div class="services-area">
             <div class="container">
