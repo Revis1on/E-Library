@@ -1,0 +1,5 @@
+  <system.web>
+    <authentication mode="Forms">
+          <forms timeout="20160"/>
+    </authentication>
+</system.web>

@@ -81,28 +81,6 @@
                         </div>
                      </div>
                   </div>
-                    <div class="row">
-                     <div class="col-md-6">
-                        <label>Број за контакт</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Број за контакт" ReadOnly= "true" ></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <label>Емаил</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Емаил" ReadOnly="true" ></asp:TextBox>
-                        </div>
-                     </div>
-                  </div>
-                    <div class="row">
-                     <div class="col">
-                        <label>Адреса на живеење</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Целосна адреса на живеење" TextMode="MultiLine" Rows="2" ReadOnly ="true"></asp:TextBox>
-                        </div>
-                     </div>
-                  </div>
                   <div class="row">
                      <div class="col-md-6">
                         <label>Почетен Датум</label>
@@ -145,16 +123,13 @@
                   <div class="row">
                      <div class="col">
                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT [username_id], [book_id], [book_name], [full_name], [full_address], [num_contact], [email], [order_id] FROM [book_order_tbl]"></asp:SqlDataSource>
-                         <asp:GridView class="table table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="order_id" DataSourceID="SqlDataSource1">
+                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="order_id" DataSourceID="SqlDataSource1">
                              <Columns>
                                  <asp:BoundField DataField="username_id" HeaderText="Корисник ИД" SortExpression="username_id" />
                                  <asp:BoundField DataField="book_id" HeaderText="Книга ИД" SortExpression="book_id" />
                                  <asp:BoundField DataField="book_name" HeaderText="Име на Книга" SortExpression="book_name" />
-                                 <asp:BoundField DataField="full_name" HeaderText="Име и Презиме" SortExpression="full_name" />
-                                 <asp:BoundField DataField="full_address" HeaderText="Целосна Адреса" SortExpression="full_address" />
-                                 <asp:BoundField DataField="num_contact" HeaderText="Телефонски Број" SortExpression="num_contact" />
-                                 <asp:BoundField DataField="email" HeaderText="Е-маил" SortExpression="email" />
-                                 <asp:BoundField DataField="order_id" HeaderText="order_id" ReadOnly="True" SortExpression="order_id" />
+                                 <asp:BoundField DataField="full_name" HeaderText="Име и Презиме" SortExpression="full_name" />  
+                                 <asp:BoundField DataField="order_id" HeaderText="Нарачка ИД" ReadOnly="True" SortExpression="order_id" />
                              </Columns>
                          </asp:GridView>
                      </div>

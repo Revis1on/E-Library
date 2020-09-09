@@ -54,9 +54,14 @@
                         <hr>
                      </div>
                   </div>
-                  <div class="row">
-                     <div class="col">
+                  <div class="row mb-2 ">
+                     <div class="col ">
+                         <label>Слика</label>
                         <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload1" runat="server" />
+                     </div>
+                      <div class="col">
+                          <label>E-Копија</label>
+                        <asp:FileUpload  class="form-control" ID="FileUpload2" runat="server" />
                      </div>
                   </div>
                   <div class="row">

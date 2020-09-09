@@ -17,11 +17,13 @@ namespace E_Library
 
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
-        static string global_filepath;
+        static string global_filepath, global_filebookpath;
         static int global_actual_stock, global_current_stock, global_issued_books;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
 
 
             autoGenId();
@@ -216,7 +218,19 @@ namespace E_Library
                         filepath = "~/book_inventory/" + filename;
                     }
 
+                    string bookpath = "-/ebook/";
+                    string filebook = Path.GetFileName(FileUpload2.PostedFile.FileName);
+                    if(filebook =="" || filebook == null)
+                    {
+                        filebook = global_filebookpath;
+                    }
 
+                    else
+                    {
+                        FileUpload2.SaveAs(Server.MapPath("e-books/" + filebook));
+                        bookpath = "~/e-books/" + filebook;
+                    }
+              
 
                     SqlConnection con = new SqlConnection(strcon);
                     if (con.State == ConnectionState.Closed)
@@ -224,7 +238,7 @@ namespace E_Library
                         con.Open();
 
                     }
-                    SqlCommand cmd = new SqlCommand("UPDATE book_master_tbl set book_name=@book_name, genre=@genre, author_name=@author_name, publisher_name=@publisher_name, publish_date=@publish_date, language=@language, edition=@edition, book_cost=@book_cost, no_of_pages=@no_of_pages, book_description=@book_description, actual_stock=@actual_stock, current_stock=@current_stock, book_img_link=@book_img_link where book_id='" + TextBox1.Text.Trim() + "'", con);
+                    SqlCommand cmd = new SqlCommand("UPDATE book_master_tbl set book_name=@book_name, genre=@genre, author_name=@author_name, publisher_name=@publisher_name, publish_date=@publish_date, language=@language, edition=@edition, book_cost=@book_cost, no_of_pages=@no_of_pages, book_description=@book_description, actual_stock=@actual_stock, current_stock=@current_stock, book_img_link=@book_img_link,book_file_link=@book_file_link where book_id='" + TextBox1.Text.Trim() + "'", con);
 
                     cmd.Parameters.AddWithValue("@book_name", TextBox2.Text.Trim());
                     cmd.Parameters.AddWithValue("@genre", genres);
@@ -239,6 +253,7 @@ namespace E_Library
                     cmd.Parameters.AddWithValue("@actual_stock", actual_stock.ToString());
                     cmd.Parameters.AddWithValue("@current_stock", current_stock.ToString());
                     cmd.Parameters.AddWithValue("@book_img_link", filepath);
+                    cmd.Parameters.AddWithValue("@book_file_link", bookpath);
 
 
                     cmd.ExecuteNonQuery();
@@ -308,7 +323,7 @@ namespace E_Library
                     global_current_stock = Convert.ToInt32(dt.Rows[0]["current_stock"].ToString().Trim());
                     global_issued_books = global_actual_stock - global_current_stock;
                     global_filepath = dt.Rows[0]["book_img_link"].ToString();
-
+                    global_filebookpath = dt.Rows[0]["book_file_link"].ToString();
                 }
                 else
                 {
@@ -412,6 +427,10 @@ namespace E_Library
                 FileUpload1.SaveAs(Server.MapPath("book_inventory/" + filename));
                 filepath = "~/book_inventory/" + filename;
 
+                string bookpath;
+                string filebook = Path.GetFileName(FileUpload2.PostedFile.FileName);
+                FileUpload2.SaveAs(Server.MapPath("e-books/" + filebook));
+                bookpath = "~/e-books/" + filebook;
 
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
@@ -420,9 +439,9 @@ namespace E_Library
                 }
 
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO book_master_tbl(book_id,book_name,genre,author_name,publisher_name,publish_date,language,edition,book_cost,no_of_pages,book_description,actual_stock,current_stock,book_img_link) values(@book_id,@book_name,@genre,@author_name,@publisher_name,@publish_date,@language,@edition,@book_cost,@no_of_pages,@book_description,@actual_stock,@current_stock,@book_img_link)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO book_master_tbl(book_id,book_name,genre,author_name,publisher_name,publish_date,language,edition,book_cost,no_of_pages,book_description,actual_stock,current_stock,book_img_link, book_file_link) values(@book_id,@book_name,@genre,@author_name,@publisher_name,@publish_date,@language,@edition,@book_cost,@no_of_pages,@book_description,@actual_stock,@current_stock,@book_img_link,@book_file_link)", con);
 
-                cmd.Parameters.AddWithValue("@book_id", TextBox1.Text.Trim());
+                cmd.Parameters.AddWithValue("@book_id", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_name", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@genre", genres);
                 cmd.Parameters.AddWithValue("@author_name", DropDownList3.SelectedItem.Value);
@@ -436,11 +455,13 @@ namespace E_Library
                 cmd.Parameters.AddWithValue("@actual_stock", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@current_stock", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_img_link", filepath);
-                 
+                cmd.Parameters.AddWithValue("@book_file_link", bookpath);
+
+
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Книгата е додадена.');</script>");
+                Response.Write("<script>alert('Книгата е додадена!.');</script>");
                 
                 GridView1.DataBind();
 

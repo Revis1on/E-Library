@@ -83,7 +83,6 @@ C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\bin\System.Me
 C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\bin\System.Numerics.Vectors.xml
 C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\E-Library.csprojAssemblyReference.cache
 C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\E-Library.csproj.CoreCompileInputs.cache
 C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\E-Library.csproj.CopyComplete
 C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\E-Library.dll
@@ -178,3 +177,4 @@ E:\E-Library\E-Library\obj\Release\E-Library.csproj.CoreCompileInputs.cache
 E:\E-Library\E-Library\obj\Release\E-Library.csproj.CopyComplete
 E:\E-Library\E-Library\obj\Release\E-Library.dll
 E:\E-Library\E-Library\obj\Release\E-Library.pdb
+C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\E-Library\obj\Release\E-Library.csprojAssemblyReference.cache
