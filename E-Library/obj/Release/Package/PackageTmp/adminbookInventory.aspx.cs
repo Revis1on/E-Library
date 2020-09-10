@@ -17,7 +17,7 @@ namespace E_Library
 
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
-        static string global_filepath;
+        static string global_filepath, global_filebookpath;
         static int global_actual_stock, global_current_stock, global_issued_books;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -218,10 +218,19 @@ namespace E_Library
                         filepath = "~/book_inventory/" + filename;
                     }
 
-                    string bookpath;
+                    string bookpath = "-/ebook/";
                     string filebook = Path.GetFileName(FileUpload2.PostedFile.FileName);
-                    FileUpload2.SaveAs(Server.MapPath("e-books/" + filebook));
-                    bookpath = "~/e-books/" + filebook;
+                    if(filebook =="" || filebook == null)
+                    {
+                        filebook = global_filebookpath;
+                    }
+
+                    else
+                    {
+                        FileUpload2.SaveAs(Server.MapPath("e-books/" + filebook));
+                        bookpath = "~/e-books/" + filebook;
+                    }
+              
 
                     SqlConnection con = new SqlConnection(strcon);
                     if (con.State == ConnectionState.Closed)
@@ -314,7 +323,7 @@ namespace E_Library
                     global_current_stock = Convert.ToInt32(dt.Rows[0]["current_stock"].ToString().Trim());
                     global_issued_books = global_actual_stock - global_current_stock;
                     global_filepath = dt.Rows[0]["book_img_link"].ToString();
-
+                    global_filebookpath = dt.Rows[0]["book_file_link"].ToString();
                 }
                 else
                 {

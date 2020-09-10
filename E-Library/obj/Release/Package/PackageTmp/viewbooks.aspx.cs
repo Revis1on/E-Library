@@ -39,8 +39,7 @@ namespace E_Library
                 Session["id"] = id;
                 Response.Redirect("lentbook.aspx");
             }
-
-
+            
         }
 
 
@@ -57,6 +56,23 @@ namespace E_Library
             Response.End();
         }
 
-     
+        protected void Display(object sender, EventArgs e)
+        {
+            int rowIndex = Convert.ToInt32(((sender as LinkButton).NamingContainer as GridViewRow).RowIndex);
+            GridViewRow row = GridView1.Rows[rowIndex];
+
+            BookNameL.Text = (row.FindControl("BookNameL") as Label).Text;
+            AvtorIDL.Text = (row.FindControl("AvtorIDL") as Label).Text;
+            GenreL.Text = (row.FindControl("GenreL") as Label).Text;
+            PubNL.Text = (row.FindControl("PubNL") as HiddenField).Value;
+            NopL.Text = (row.FindControl("NopL") as HiddenField).Value;
+            bks.Text = (row.FindControl("bks") as HiddenField).Value;
+            Image2.ImageUrl = (row.FindControl("img") as HiddenField).Value;
+
+            ClientScript.RegisterStartupScript(this.GetType(), "Pop", "openModal();", true);
+        }
+
+   
+
     }
 }
