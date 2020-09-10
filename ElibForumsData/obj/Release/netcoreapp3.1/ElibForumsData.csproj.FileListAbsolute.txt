@@ -1,0 +1,5 @@
+C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\ElibForumsData\bin\Release\netcoreapp3.1\ElibForumsData.deps.json
+C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\ElibForumsData\bin\Release\netcoreapp3.1\ElibForumsData.dll
+C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\ElibForumsData\obj\Release\netcoreapp3.1\ElibForumsData.csprojAssemblyReference.cache
+C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\ElibForumsData\obj\Release\netcoreapp3.1\ElibForumsData.AssemblyInfoInputs.cache
+C:\Users\Encrypt3d\source\repos\E-Library-Real\E-Library\ElibForumsData\obj\Release\netcoreapp3.1\ElibForumsData.AssemblyInfo.cs
