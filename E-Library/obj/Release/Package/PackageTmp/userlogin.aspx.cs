@@ -27,7 +27,7 @@ namespace E_Library
                     con.Open();
                 }
                 SqlCommand cmd = new SqlCommand("SELECT * from member_master_tbl where member_id='" + TextBox1.Text.Trim() + "' AND password = '" + TextBox2.Text.Trim() + "'", con);
-
+       
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.HasRows)
@@ -36,11 +36,13 @@ namespace E_Library
                     {
                         Response.Write("<script>'"+dr.GetValue(8).ToString()+"'</script>");
                         Session["username"] = dr.GetValue(8).ToString();
-                        Session["fullname"] = dr.GetValue(0).ToString();
-                        Session["role"] = "user";
+                        Session["fullname"] = dr.GetValue(0).ToString();        
                         Session["status"] = dr.GetValue(10).ToString();
+                        Session["role"] = dr.GetValue(11).ToString().Trim();
+                        
                     }
 
+                    
                     Response.Redirect("homepage.aspx");
                 }
                 else

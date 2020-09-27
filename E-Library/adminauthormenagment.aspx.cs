@@ -19,7 +19,7 @@ namespace E_Library
         {
             try
             {
-                if (Session["role"].ToString() == "User" || Session["roll"] == null)
+                if (Session["role"].ToString() == "User" || Session["role"] == null)
                 {
 
                     Response.Write("<script>alert('Немате пристап до оваај ресурс');</script>");

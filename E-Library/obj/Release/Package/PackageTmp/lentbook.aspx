@@ -142,7 +142,7 @@
                   <div class="row">
                      <div class="col">
                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False">
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound">
                             <Columns>
                                 <asp:BoundField DataField="member_id" HeaderText="Корисник ИД" SortExpression="member_id" />
                                 <asp:BoundField DataField="member_name" HeaderText="Име на Корисник" SortExpression="member_name" />

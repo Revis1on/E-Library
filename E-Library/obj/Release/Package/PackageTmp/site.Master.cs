@@ -8,7 +8,7 @@ namespace E_Library
         {
             try
             {
-                if (Session["role"].Equals(""))
+                if (Session["role"].ToString().Equals(""))
                 {
                     LinkButton1.Visible = true; // user login link button
                     LinkButton2.Visible = true; // sign up link button
@@ -19,7 +19,7 @@ namespace E_Library
 
 
                 }
-                else if (Session["role"].Equals("user"))
+                else if (Session["role"].ToString().Equals("User"))
                 {
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
@@ -32,7 +32,7 @@ namespace E_Library
 
 
                 }
-                else if (Session["role"].Equals("admin"))
+                else if (Session["role"].ToString().Equals("Admin"))
                 {
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button

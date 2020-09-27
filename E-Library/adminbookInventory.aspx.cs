@@ -25,7 +25,7 @@ namespace E_Library
 
             try
             {
-                if (Session["role"].ToString() == "User" || Session["roll"] == null)
+                if (Session["role"].ToString() == "User" || Session["role"] == null)
                 {
 
                     Response.Write("<script>alert('Немате пристап до оваај ресурс');</script>");
@@ -236,7 +236,7 @@ namespace E_Library
                         filepath = "~/book_inventory/" + filename;
                     }
 
-                    string bookpath = "-/ebook/";
+                    string bookpath = "~/e-book/";
                     string filebook = Path.GetFileName(FileUpload2.PostedFile.FileName);
                     if(filebook =="" || filebook == null)
                     {
