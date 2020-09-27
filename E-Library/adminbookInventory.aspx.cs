@@ -225,28 +225,17 @@ namespace E_Library
 
                     string filepath = "~/book_inventory/books1";
                     string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
-                    if (filename == "" || filename == null)
+ 
+                    if (filename == "" || filename == null )
                     {
                         filepath = global_filepath;
-
+                       
                     }
                     else
                     {
                         FileUpload1.SaveAs(Server.MapPath("book_inventory/" + filename));
                         filepath = "~/book_inventory/" + filename;
-                    }
-
-                    string bookpath = "~/e-book/";
-                    string filebook = Path.GetFileName(FileUpload2.PostedFile.FileName);
-                    if(filebook =="" || filebook == null)
-                    {
-                        filebook = global_filebookpath;
-                    }
-
-                    else
-                    {
-                        FileUpload2.SaveAs(Server.MapPath("e-books/" + filebook));
-                        bookpath = "~/e-books/" + filebook;
+             
                     }
               
 
@@ -271,7 +260,7 @@ namespace E_Library
                     cmd.Parameters.AddWithValue("@actual_stock", actual_stock.ToString());
                     cmd.Parameters.AddWithValue("@current_stock", current_stock.ToString());
                     cmd.Parameters.AddWithValue("@book_img_link", filepath);
-                    cmd.Parameters.AddWithValue("@book_file_link", bookpath);
+                    cmd.Parameters.AddWithValue("@book_file_link", TextBox12.Text.Trim());
 
 
                     cmd.ExecuteNonQuery();
@@ -317,6 +306,7 @@ namespace E_Library
                     TextBox4.Text = dt.Rows[0]["actual_stock"].ToString().Trim();
                     TextBox5.Text = dt.Rows[0]["current_stock"].ToString().Trim();
                     TextBox6.Text = dt.Rows[0]["book_description"].ToString();
+                    TextBox12.Text = dt.Rows[0]["book_file_link"].ToString();
                     TextBox7.Text = "" + (Convert.ToInt32(dt.Rows[0]["actual_stock"].ToString()) - Convert.ToInt32(dt.Rows[0]["current_stock"].ToString()));
 
                     DropDownList1.SelectedValue = dt.Rows[0]["language"].ToString().Trim();
@@ -341,7 +331,7 @@ namespace E_Library
                     global_current_stock = Convert.ToInt32(dt.Rows[0]["current_stock"].ToString().Trim());
                     global_issued_books = global_actual_stock - global_current_stock;
                     global_filepath = dt.Rows[0]["book_img_link"].ToString();
-                    global_filebookpath = dt.Rows[0]["book_file_link"].ToString();
+                    
                 }
                 else
                 {
@@ -445,10 +435,7 @@ namespace E_Library
                 FileUpload1.SaveAs(Server.MapPath("book_inventory/" + filename));
                 filepath = "~/book_inventory/" + filename;
 
-                string bookpath;
-                string filebook = Path.GetFileName(FileUpload2.PostedFile.FileName);
-                FileUpload2.SaveAs(Server.MapPath("e-books/" + filebook));
-                bookpath = "~/e-books/" + filebook;
+             
 
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
@@ -473,7 +460,7 @@ namespace E_Library
                 cmd.Parameters.AddWithValue("@actual_stock", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@current_stock", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_img_link", filepath);
-                cmd.Parameters.AddWithValue("@book_file_link", bookpath);
+                cmd.Parameters.AddWithValue("@book_file_link", TextBox12.Text.Trim());
 
 
 

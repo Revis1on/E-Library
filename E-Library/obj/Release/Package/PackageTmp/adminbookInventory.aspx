@@ -72,8 +72,8 @@
                         <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload1" runat="server" />
                      </div>
                       <div class="col">
-                          <label>E-Копија</label>
-                        <asp:FileUpload  class="form-control" ID="FileUpload2" runat="server" />
+                          <label>Е-Копија</label>
+                        <asp:TextBox CssClass="form-control" ID="TextBox12" runat="server" placeholder="Внеси линк од Е-Книгата"></asp:TextBox>
                      </div>
                   </div>
                   <div class="row">

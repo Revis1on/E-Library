@@ -94,8 +94,8 @@
                                                     <div class="col-12 mt-3">
                                                         <div class="btn-group" role="group">
                                                         <asp:Button class="btn btn-primary" runat="server" CommandName="Order" CommandArgument="<%# Container.DataItemIndex  %>" Text="Изнајми" ></asp:Button>
-                                                        <asp:Button class="btn btn-info" runat="server"  CommandName ="Downnload" CommandArgument='<%# Eval("book_file_link") %>' OnClick="DownloadFile" Text="Превземи" ></asp:Button>
-
+                                                            <asp:LinkButton class="btn btn-info" runat="server" CommandArgument='<%# Eval("book_file_link") %>' CommandName="Redirect" Text="Превземи" ></asp:LinkButton>
+                                                            
 
 
 
@@ -156,7 +156,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Затвори</button>
-        <asp:Button class="btn btn-info" runat="server"  CommandName ="Downnload" CommandArgument='<%# Eval("book_file_link") %>' OnClick="DownloadFile" Text="Превземи" ></asp:Button>
+        <asp:LinkButton class="btn btn-info" runat="server" CommandArgument='<%# Eval("book_file_link") %>' CommandName="Redirect" Text="Превземи" ></asp:LinkButton>
       </div>
     </div>
   </div>

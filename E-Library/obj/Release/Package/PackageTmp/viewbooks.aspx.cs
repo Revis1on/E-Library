@@ -39,6 +39,10 @@ namespace E_Library
                 Session["id"] = id;
                 Response.Redirect("lentbook.aspx");
             }
+            else if (e.CommandName == "Redirect")
+            {
+                Response.Redirect(e.CommandArgument.ToString());
+            }
             
         }
 
@@ -47,14 +51,7 @@ namespace E_Library
 
         //user defiend methods
 
-        protected void DownloadFile(object sender, EventArgs e)
-        {
-            string filePath = (sender as Button).CommandArgument;
-            Response.ContentType = ContentType;
-            Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
-            Response.WriteFile(filePath);
-            Response.End();
-        }
+    
 
         protected void Display(object sender, EventArgs e)
         {
