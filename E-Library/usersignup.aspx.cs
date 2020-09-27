@@ -59,6 +59,10 @@ namespace E_Library
         }
         void signUpNewMember()
         {
+
+
+            string role = "User";
+
             //Response.Write("<script>alert('Testing');</script>");
             try
             {
@@ -67,7 +71,7 @@ namespace E_Library
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status,account_role) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status,@account_role)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@contact_no", TextBox1.Text.Trim());
@@ -79,6 +83,7 @@ namespace E_Library
                 cmd.Parameters.AddWithValue("@member_id", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());
                 cmd.Parameters.AddWithValue("@account_status", "pending");
+                cmd.Parameters.AddWithValue("@account_role", role);
                 cmd.ExecuteNonQuery();
                 con.Close();
 

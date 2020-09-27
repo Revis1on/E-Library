@@ -23,12 +23,30 @@ namespace E_Library
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            try
+            {
+                if (Session["role"].ToString() == "User" || Session["roll"] == null)
+                {
 
+                    Response.Write("<script>alert('Немате пристап до оваај ресурс');</script>");
+                    Response.Redirect("homepage.aspx");
+                }
 
-
-            autoGenId();
+                else
+                {
+                          autoGenId();
             fillAuthorPublisherValues();
             GridView1.DataBind();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+      
         }
 
         //add btn

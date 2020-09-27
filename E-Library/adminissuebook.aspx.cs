@@ -12,7 +12,22 @@ namespace E_Library
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"].ToString() == "User" || Session["username"].ToString() == null)
+                {
 
+                    Response.Write("<script>alert('Немате пристап до оваај ресурс');</script>");
+                    Response.Redirect("homepage.aspx");
+                }
+
+             
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         // go btn
         protected void Button1_Click(object sender, EventArgs e)
