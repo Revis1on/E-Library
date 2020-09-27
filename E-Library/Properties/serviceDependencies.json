@@ -1,7 +1,12 @@
 {
   "dependencies": {
+    "storage1": {
+      "type": "storage",
+      "connectionId": "elibraryDBConnectionString"
+    },
     "appInsights1": {
-      "type": "appInsights"
+      "type": "appInsights",
+      "connectionId": "APPINSIGHTS_INSTRUMENTATIONKEY"
     }
   }
 }
