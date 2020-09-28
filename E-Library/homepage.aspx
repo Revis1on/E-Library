@@ -17,7 +17,7 @@
         </div>
     </div>
 
-	<main>
+	
         <!-- ? Preloader Start -->
   
         <!--? slider Area Start-->
@@ -81,15 +81,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            
         </div>
-        
-        </main>
-				<!-- //main banner -->
-
-			
-        
-
 </asp:Content>
