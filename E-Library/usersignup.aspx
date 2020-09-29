@@ -52,7 +52,7 @@
                      <div class="col-md-6">
                       
                          <label>Име и Презиме<span class="text-danger">*</span></label><div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Внесете Име и Презиме " data-toggle="tooltip" data-placement="top" ToolTip="Вашето Име и Презиме"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Внесете Име и Презиме " TextMode="SingleLine" data-toggle="tooltip" data-placement="top" ToolTip="Вашето Име и Презиме" ></asp:TextBox>
                            
                         </div>
 
@@ -73,7 +73,7 @@
                        
                          <label>Број за контакт<span class="text-danger">*</span></label>
                          <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Внесете телефонски број " TextMode="Number" data-toggle="tooltip" data-placement="top" ToolTip="Пример 076123456"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Внесете телефонски број " TextMode="Phone" data-toggle="tooltip" data-placement="top" ToolTip="Пример 076123456"></asp:TextBox>
                             <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Бројот не е валиден" ControlToValidate="TextBox1" Display="Dynamic" MinimumValue="0" class="text-danger" MaximumValue="100 000 000"></asp:RangeValidator>
                         </div>
 
