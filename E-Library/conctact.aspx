@@ -65,39 +65,11 @@
                        
                           <label>E-мeил</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси e-мeил" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси E-Пошта" TextMode="Email"></asp:TextBox>
                         </div>
 
                      </div>
                   </div>
-                      <div class="row">
-                     <div class="col-md-4">
-                       
-                         <label>Регион</label>
-                        <div class="form-group">
-                            <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
-                                <asp:ListItem Text="Избери" Value="select" />
-
-                            </asp:DropDownList>
-                        </div>
-
-                     </div>
-                      <div class="col-md-4">
-                       
-                          <label>Град</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Внеси град" TextMode="SingleLine"></asp:TextBox>
-                        </div>
-
-                     </div>
-                            <div class="col-md-4">
-                       
-                          <label>Поштенски код</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Внеси поштенски код" TextMode="Number"></asp:TextBox>
-                        </div>
-
-                     </div>
                   </div>
                     <div class="row">
                      <div class="col">
@@ -112,7 +84,7 @@
                   <div class="row">
                      <div class="col">               
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Испрати" />
+                           <asp:Button class="btn btn-success btn-block btn-lg" OnClick="Button1_Click" ID="Button1" runat="server" Text="Испрати" />
                         </div>
                      </div>
                   </div>
