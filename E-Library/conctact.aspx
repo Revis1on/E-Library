@@ -14,7 +14,7 @@
         </div>
     </div>
 
-<div class="container">
+<div class="container mt-2">
       <div class="row">
          <div class="col-md-8 mx-auto">
             <div class="card">
@@ -22,7 +22,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="150px" src="Images/imgs/generaluser.png"/>
+                           <img width="150px" src="Images/imgs/message.png"/>
                         </center>
                      </div>
                   </div>
@@ -58,28 +58,22 @@
 
                      </div>
                   </div>
-
-
                     <div class="row">
                       <div class="col-md-12">
-                       
                           <label>E-мeил</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси E-Пошта" TextMode="Email"></asp:TextBox>
                         </div>
-
                      </div>
                   </div>
-                  </div>
-                    <div class="row">
+                   <div class="row">
                      <div class="col">
-                       
                          <label>Порака</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Содржина на пораката" TextMode="MultiLine"></asp:TextBox>
                         </div>
-
                      </div>
+                  </div>
                   </div>
                   <div class="row">
                      <div class="col">               
@@ -93,7 +87,5 @@
             <a href="homepage.aspx"><< Назад</a><br><br>
          </div>
       </div>
-   </div>
 
-</form>
 </asp:Content>

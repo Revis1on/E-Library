@@ -20,7 +20,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container mt-2">
       <div class="row">
          <div class="col-md-8 mx-auto">
             <div class="card">
@@ -28,7 +28,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="120px" src="Images/imgs/generaluser.png"/>
+                           <img width="120px" src="Images/imgs/add-group.png"/>
                         </center>
                      </div>
                   </div>

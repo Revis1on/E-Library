@@ -129,13 +129,8 @@
                             <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Форум</asp:LinkButton>
                         </li>
                         
-                        <li class="nav-item active dropdown">
-                    <asp:LinkButton class="nav-link dropdown-toggle" data-toggle="dropdown" ID="LinkButton1" runat="server">Најава</asp:LinkButton>
-                      
-                       <div class="dropdown-menu">
-                      <a class="dropdown-item" href="userlogin.aspx">Корисници</a>
-                      <a class="dropdown-item" href="adminlogin.aspx">Администрација</a>
-                        </div>
+                        <li class="nav-item active ">
+                    <asp:LinkButton class="nav-link" ID="LinkButton1" OnClick="LinkButton1_Click" runat="server">Најава</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Регистрација</asp:LinkButton>

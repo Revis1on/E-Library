@@ -95,5 +95,13 @@ namespace E_Library
         {
             Response.Redirect("https://yfa-forum-mk.azurewebsites.net");
         }
+
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userlogin.aspx");
+
+        }
     }
+
 }
