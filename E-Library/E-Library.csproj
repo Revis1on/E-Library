@@ -2038,6 +2038,7 @@
     <Content Include="Images\imgs\generaluser.png" />
     <Content Include="Images\imgs\library.png" />
     <Content Include="Images\imgs\LogoBook.png" />
+    <Content Include="Images\imgs\management.png" />
     <Content Include="Images\imgs\message.png" />
     <Content Include="Images\imgs\publisher.png" />
     <Content Include="Images\imgs\sign-up.png" />

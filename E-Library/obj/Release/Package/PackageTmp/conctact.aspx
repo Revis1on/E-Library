@@ -14,7 +14,7 @@
         </div>
     </div>
 
-<div class="container">
+<div class="container mt-2">
       <div class="row">
          <div class="col-md-8 mx-auto">
             <div class="card">
@@ -22,7 +22,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="150px" src="Images/imgs/generaluser.png"/>
+                           <img width="150px" src="Images/imgs/message.png"/>
                         </center>
                      </div>
                   </div>
@@ -58,61 +58,27 @@
 
                      </div>
                   </div>
-
-
                     <div class="row">
                       <div class="col-md-12">
-                       
                           <label>E-мeил</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси e-мeил" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси E-Пошта" TextMode="Email"></asp:TextBox>
                         </div>
-
                      </div>
                   </div>
-                      <div class="row">
-                     <div class="col-md-4">
-                       
-                         <label>Регион</label>
-                        <div class="form-group">
-                            <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
-                                <asp:ListItem Text="Избери" Value="select" />
-
-                            </asp:DropDownList>
-                        </div>
-
-                     </div>
-                      <div class="col-md-4">
-                       
-                          <label>Град</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Внеси град" TextMode="SingleLine"></asp:TextBox>
-                        </div>
-
-                     </div>
-                            <div class="col-md-4">
-                       
-                          <label>Поштенски код</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Внеси поштенски код" TextMode="Number"></asp:TextBox>
-                        </div>
-
-                     </div>
-                  </div>
-                    <div class="row">
+                   <div class="row">
                      <div class="col">
-                       
                          <label>Порака</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Содржина на пораката" TextMode="MultiLine"></asp:TextBox>
                         </div>
-
                      </div>
+                  </div>
                   </div>
                   <div class="row">
                      <div class="col">               
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Испрати" />
+                           <asp:Button class="btn btn-success btn-block btn-lg" OnClick="Button1_Click" ID="Button1" runat="server" Text="Испрати" />
                         </div>
                      </div>
                   </div>
@@ -121,7 +87,5 @@
             <a href="homepage.aspx"><< Назад</a><br><br>
          </div>
       </div>
-   </div>
 
-</form>
 </asp:Content>

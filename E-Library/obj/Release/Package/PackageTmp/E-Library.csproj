@@ -2019,6 +2019,7 @@
     <Content Include="FontAwesome\webfonts\fa-brands-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.svg" />
+    <Content Include="forgothpassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="homepage.aspx" />
     <Content Include="Images\icons\book-lent.png" />
@@ -2028,13 +2029,17 @@
     <Content Include="Images\books\b3.jpg" />
     <Content Include="Images\books\b4.jpg" />
     <Content Include="Images\books\b5.jpg" />
+    <Content Include="Images\imgs\add-group.png" />
     <Content Include="Images\imgs\adminuser.png" />
     <Content Include="Images\imgs\books.png" />
     <Content Include="book_inventory\books1.png" />
     <Content Include="Images\imgs\defaulters-list.png" />
+    <Content Include="Images\imgs\forgot.png" />
     <Content Include="Images\imgs\generaluser.png" />
     <Content Include="Images\imgs\library.png" />
     <Content Include="Images\imgs\LogoBook.png" />
+    <Content Include="Images\imgs\management.png" />
+    <Content Include="Images\imgs\message.png" />
     <Content Include="Images\imgs\publisher.png" />
     <Content Include="Images\imgs\sign-up.png" />
     <Content Include="Images\imgs\writer.png" />
@@ -2103,6 +2108,13 @@
     </Compile>
     <Compile Include="conctact.aspx.designer.cs">
       <DependentUpon>conctact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgothpassword.aspx.cs">
+      <DependentUpon>forgothpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgothpassword.aspx.designer.cs">
+      <DependentUpon>forgothpassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2288,6 +2300,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="e-books\" />
     <Folder Include="Models\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

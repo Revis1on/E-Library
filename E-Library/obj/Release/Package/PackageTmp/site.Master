@@ -4,7 +4,11 @@
 
 <html>
 <head runat="server">
-    <title></title>
+     <title>Е-Библиотека</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- CSS REGION-->
     <%--bootstrap css--%>
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -88,7 +92,8 @@
 
 
     <form id="form1" runat="server">
-        <div>
+  
+             <div class="header-sticky">
 
           <nav class="navbar navbar-dark navbar-expand-lg text-light " style="background-color: #5c74fc;">
               <a class="navbar-brand" href="homepage.aspx">
@@ -124,13 +129,8 @@
                             <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Форум</asp:LinkButton>
                         </li>
                         
-                        <li class="nav-item active dropdown">
-                    <asp:LinkButton class="nav-link dropdown-toggle" data-toggle="dropdown" ID="LinkButton1" runat="server">Најава</asp:LinkButton>
-                      
-                       <div class="dropdown-menu">
-                      <a class="dropdown-item" href="userlogin.aspx">Корисници</a>
-                      <a class="dropdown-item" href="adminlogin.aspx">Администрација</a>
-                        </div>
+                        <li class="nav-item active ">
+                    <asp:LinkButton class="nav-link" ID="LinkButton1" OnClick="LinkButton1_Click" runat="server">Најава</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Регистрација</asp:LinkButton>
@@ -148,8 +148,8 @@
  
 
           </nav>
-
-        </div>
+</div>
+        
 
 
          <!-- Main Content Placeholder -->
@@ -182,7 +182,7 @@
                                 <ul class="list-unstyled f_list">
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">Услови за користење</a></li>
-                                    <li><a href="#">Kонтакт</a></li>
+                                    <li><a href="conctact.aspx">Kонтакт</a></li>
                                     <li><a href="#">Приватност</a></li>
                                 </ul>
                             </div>
