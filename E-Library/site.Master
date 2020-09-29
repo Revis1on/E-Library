@@ -88,9 +88,6 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-
-
-
     <form id="form1" runat="server">
   
              <div class="header-sticky">
@@ -150,8 +147,6 @@
                         </li>
                     </ul>
                 </div>
- 
-
           </nav>
 </div>
         
@@ -187,7 +182,7 @@
                                 <ul class="list-unstyled f_list">
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">Услови за користење</a></li>
-                                    <li><a href="#">Kонтакт</a></li>
+                                    <li><a href="conctact.aspx">Kонтакт</a></li>
                                     <li><a href="#">Приватност</a></li>
                                 </ul>
                             </div>
