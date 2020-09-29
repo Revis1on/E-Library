@@ -41,20 +41,21 @@
                     <div class="row">
                       <div class="col-md-12">
                        
-                          <label class="text-black">Внесетеја вашата е-поша со која се имате регистрирано</label>
+                          <label class="text-black">Внесетеја вашата е-пошта со која се имате регистрирано</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси E-Пошта" TextMode="Email"></asp:TextBox>
                         </div>
 
                      </div>
                   </div>
-                  </div>
-                  <div class="row">
+                           <div class="row">
                      <div class="col">               
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Испрати" />
+                            <asp:Label ID="Label1" runat="server" Text="" ></asp:Label>
+                           <asp:Button class="btn btn-success btn-block btn-lg" OnClick="Button1_Click" ID="Button1" runat="server" Text="Испрати" />
                         </div>
                      </div>
+                  </div>
                   </div>
                </div>
             </div>

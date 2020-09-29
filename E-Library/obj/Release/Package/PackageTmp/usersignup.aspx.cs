@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace E_Library
 {
@@ -87,7 +88,8 @@ namespace E_Library
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                Response.Write("<script>alert('Регистрацијата е успешна');</script>");
+                Label1.Text = "Регистрацијате е успешма ";
+                Label1.ForeColor = Color.Green;
             }
             catch (Exception ex)
             {

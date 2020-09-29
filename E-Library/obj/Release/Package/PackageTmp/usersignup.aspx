@@ -174,6 +174,7 @@
                   <div class="row">
                      <div class="col">               
                         <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                            <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Регистрирај се" OnClick="Button1_Click" />
                         </div>
                      </div>
