@@ -28,7 +28,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="120px" src="Images/imgs/generaluser.png"/>
+                           <img width="150px" src="Images/imgs/generaluser.png"/>
                         </center>
                      </div>
                   </div>
@@ -39,7 +39,14 @@
                         </center>
                      </div>
                   </div>
-                        <div class="row mt-2 mb-1">
+
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+
+                        <div class="row">
                        
                      <div class="col">
                        <center>
@@ -48,11 +55,13 @@
                      </div>
                       
                   </div>
+
+                   
                    <div class="row">
                      <div class="col-md-6">
                        
-                         <label>Име и Презиме<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="TextBox3" ErrorMessage="*"></asp:RequiredFieldValidator>
-&nbsp;<div class="form-group">
+                         <label>Име и Презиме</label>
+                        <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Внесете Име и Презиме " data-toggle="tooltip" data-placement="top" ToolTip="Вашето Име и Презиме"></asp:TextBox>
                            
                         </div>
@@ -60,7 +69,7 @@
                      </div>
                       <div class="col-md-6">
                        
-                          <label>Година на Раѓање<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" class="text-danger" ControlToValidate="TextBox4" ErrorMessage="*"></asp:RequiredFieldValidator>
+                          <label>Година на Раѓање</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Внеси дата" TextMode="Date"  data-toggle="tooltip" data-placement="top" ToolTip="Внесетеја вашата дата на раѓање во дадениот формат"></asp:TextBox>
                         </div>
@@ -72,18 +81,17 @@
                     <div class="row">
                      <div class="col-md-6">
                        
-                         <label>Број за контакт<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" class="text-danger" ControlToValidate="TextBox1" ErrorMessage=""></asp:RequiredFieldValidator>
+                         <label>Број за контакт</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Внесете телефонски број " TextMode="Number" data-toggle="tooltip" data-placement="top" ToolTip="Пример 076123456"></asp:TextBox>
-                            <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Бројот не е валиден" ControlToValidate="TextBox1" Display="Dynamic" MinimumValue="0" class="text-danger" MaximumValue="100 000 000"></asp:RangeValidator>
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Внесете телефонски број " TextMode="Number" data-toggle="tooltip" data-placement="top" ToolTip="Вашиот телефонски број за контакт"></asp:TextBox>
                         </div>
 
                      </div>
                       <div class="col-md-6">
                        
-                          <label>E-Пошта<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" class="text-danger" ControlToValidate="TextBox2" ErrorMessage="*"></asp:RequiredFieldValidator>
+                          <label>E-мeил</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси e-пошта" TextMode="Email" data-toggle="tooltip" data-placement="top" ToolTip="Вашата електронска адреса"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Внеси e-мeил" TextMode="Email" data-toggle="tooltip" data-placement="top" ToolTip="Вашата електронска адреса"></asp:TextBox>
                         </div>
 
                      </div>
@@ -91,7 +99,7 @@
                       <div class="row">
                      <div class="col-md-4">
                        
-                         <label>Регион<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" class="text-danger" ControlToValidate="DropDownList1" ErrorMessage=""></asp:RequiredFieldValidator>
+                         <label>Регион</label>
                         <div class="form-group">
                             <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" data-toggle="tooltip" data-placement="top" ToolTip="На кој административен регион припаѓате">
                                 <asp:ListItem Text="Избери" Value="select" />
@@ -106,7 +114,7 @@
                      </div>
                       <div class="col-md-4">
                        
-                          <label>Град<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" class="text-danger" ControlToValidate="TextBox6" ErrorMessage=""></asp:RequiredFieldValidator>
+                          <label>Град</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Внеси град" TextMode="SingleLine" data-toggle="tooltip" data-placement="top" ToolTip="Моменталниот град во кој престојувате"></asp:TextBox>
                         </div>
@@ -114,7 +122,7 @@
                      </div>
                             <div class="col-md-4">
                        
-                          <label>Поштенски код<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" class="text-danger" ControlToValidate="TextBox7" ErrorMessage="*"></asp:RequiredFieldValidator>
+                          <label>Поштенски код</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Внеси поштенски код" TextMode="Number" data-toggle="tooltip" data-placement="top" ToolTip="Поштенскиот код од градот"></asp:TextBox>
                         </div>
@@ -124,7 +132,7 @@
                     <div class="row">
                      <div class="col">
                        
-                         <label>Адреса на живеење<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" class="text-danger" ControlToValidate="TextBox5" ErrorMessage=""></asp:RequiredFieldValidator>
+                         <label>Адреса на живеење</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Внеси целосна адреса на живеење " TextMode="MultiLine" data-toggle="tooltip" data-placement="top" ToolTip="Вашата адреса која ќе биде искористена за испраќање на книги"></asp:TextBox>
                         </div>
@@ -142,28 +150,20 @@
                       
                   </div>
 
-                     <div class="row mt-2">
-                     <div class="col-md-3">
+                     <div class="row">
+                     <div class="col-md-6">
                        
-                         <label>Корисничко име<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" class="text-danger" ControlToValidate="TextBox8" ErrorMessage=""></asp:RequiredFieldValidator>
+                         <label>Корисничко име</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Внеси корисничко име" data-toggle="tooltip" data-placement="top" ToolTip="Внесете име со кое ќе се најавувате на вашиот кориснички профил"></asp:TextBox>
                         </div>
 
                      </div>
-                      <div class="col-md-4">
-                          <label>Лозинка<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" class="text-danger" ControlToValidate="TextBox9" ErrorMessage=""></asp:RequiredFieldValidator>
+                      <div class="col-md-6">
+                       
+                          <label>Лозинка</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Внесете лозинка" TextMode="Password" data-toggle="tooltip" data-placement="top" ToolTip="Лозинка"></asp:TextBox>
-                            
-                        </div>
-
-                     </div>
-                          <div class="col-md-4">        
-                          <label>Потврди Лозинка<span class="text-danger">*</span></label><asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" class="text-danger" ControlToValidate="TextBox10" ErrorMessage=""></asp:RequiredFieldValidator>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Внесете лозинка" TextMode="Password" data-toggle="tooltip" data-placement="top" ToolTip="Лозинка за вашиот кориснички профил"></asp:TextBox>
-                            <asp:CompareValidator ID="CompareValidator1" runat="server" class="text-danger" ErrorMessage="Лозинките не се исти" ControlToCompare="TextBox9" ControlToValidate="TextBox10" Display="Dynamic"></asp:CompareValidator>
+                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Внесете лозинка" TextMode="Password" data-toggle="tooltip" data-placement="top" ToolTip="Лозинка за вашиот кориснички профил"></asp:TextBox>
                         </div>
 
                      </div>
@@ -176,15 +176,6 @@
                      <div class="col">               
                         <div class="form-group">
                            <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Регистрирај се" OnClick="Button1_Click" />
-                        </div>
-                     </div>
-                  </div>
-
-                     <div class="row">
-                     <div class="col">               
-                        <div class="form-group">
-                        <label class="text-dark">Ве молиме потполнете ги сите полиња кои се означени со <span class="text-danger">*</span> !.</label>
-                            <label class="text-dark">Пред да се регистрирате ви препорачување да ги прочитате нашите <a class="text-primary" href="#" >правила</a></label>
                         </div>
                      </div>
                   </div>
