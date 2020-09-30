@@ -61,7 +61,7 @@
                        
                           <label>Година на Раѓање<span class="text-danger">*</span></label>                      
                           <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Внеси дата" TextMode="Date"  data-toggle="tooltip" data-placement="top" ToolTip="Внесетеја вашата дата на раѓање во дадениот формат"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="mm/dd/yyyy" TextMode="Date"  data-toggle="tooltip" data-placement="top" ToolTip="Внесетеја вашата дата на раѓање во дадениот формат"></asp:TextBox>
                         </div>
 
                      </div>

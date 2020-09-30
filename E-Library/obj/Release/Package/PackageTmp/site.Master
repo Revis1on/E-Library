@@ -39,8 +39,7 @@
 
 
 
-               <!-- JS here -->
-                <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
                 <!-- Jquery, Popper, Bootstrap -->
                 <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
                 <script src="./assets/js/popper.min.js"></script>
@@ -58,24 +57,6 @@
 
                 <!-- Date Picker -->
                 <script src="./assets/js/gijgo.min.js"></script>
-                <!-- Nice-select, sticky -->
-                <script src="./assets/js/jquery.nice-select.min.js"></script>
-                <script src="./assets/js/jquery.sticky.js"></script>
-                <!-- Progress -->
-                <script src="./assets/js/jquery.barfiller.js"></script>
-
-                <!-- counter , waypoint,Hover Direction -->
-                <script src="./assets/js/jquery.counterup.min.js"></script>
-                <script src="./assets/js/waypoints.min.js"></script>
-                <script src="./assets/js/jquery.countdown.min.js"></script>
-                <script src="./assets/js/hover-direction-snake.min.js"></script>
-
-                <!-- contact js -->
-                <script src="./assets/js/contact.js"></script>
-                <script src="./assets/js/jquery.form.js"></script>
-                <script src="./assets/js/jquery.validate.min.js"></script>
-                <script src="./assets/js/mail-script.js"></script>
-                <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
                 <!-- Jquery Plugins, main Jquery -->	
                 <script src="./assets/js/plugins.js"></script>
@@ -106,6 +87,9 @@
                 </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+                         <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Како Работи?</asp:LinkButton>
+                        </li>
                          <li class="nav-item active dropdown ">
                     <asp:LinkButton class="nav-link dropdown-toggle" data-toggle="dropdown" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click">Админ Панел</asp:LinkButton>
                       
@@ -180,10 +164,9 @@
                             <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
                                 <h3 class="f-title f_600 t_color f_size_18">Помош</h3>
                                 <ul class="list-unstyled f_list">
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Услови за користење</a></li>
+                                    <li><a href="howitworks.aspx">Како Работи ?</a></li>
+                                    <li><a href="rules.aspx">Услови за користење</a></li>
                                     <li><a href="conctact.aspx">Kонтакт</a></li>
-                                    <li><a href="#">Приватност</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -191,10 +174,14 @@
                             <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
                                 <h3 class="f-title f_600 t_color f_size_18">Социјални Мрежи</h3>
                                 <div class="f_social_icon">
-                                    <a href="#" class="fab fa-facebook"></a>
-                                    <a href="#" class="fab fa-twitter"></a>
-                                    <a href="#" class="fab fa-linkedin"></a>
-                                    <a href="#" class="fab fa-pinterest"></a>
+                              
+                                    <asp:HyperLink ID="HyperLink1" runat="server" class="fab fa-facebook" NavigateUrl="https://www.facebook.com"></asp:HyperLink>
+                                
+                                    <asp:HyperLink ID="HyperLink2" runat="server" class="fab fa-twitter" NavigateUrl="https://twitter.com"></asp:HyperLink>
+                                 
+                                    <asp:HyperLink ID="HyperLink3" runat="server" class="fab fa-linkedin" NavigateUrl="https://www.linkedin.com"></asp:HyperLink>
+                                 
+                                    <asp:HyperLink ID="HyperLink4" runat="server" class="fab fa-pinterest" NavigateUrl="https://www.pinterest.com"></asp:HyperLink>
                                 </div>
                             </div>
                         </div>
