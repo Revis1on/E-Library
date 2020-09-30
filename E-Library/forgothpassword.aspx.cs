@@ -51,7 +51,8 @@ namespace E_Library
 
                     MailMessage mn = new MailMessage("elibrarytestmail@gmail.com", TextBox2.Text);
                     mn.Subject = "Вашата Лозинка";
-                    mn.Body = string.Format("Здраво : <h1>'" + username.ToString() + "'</h1> ! - Ова е твојот Кориснички ID <br> Твојата лозинка е <h1>'" + password.ToString() + "'</h1>") ;
+                    mn.Body = string.Format("Здраво <br> Вашето корисничко име е : <h3>" + username + "</h3>   <br> Твојата лозинка е <h3>" + password+ "</h3> <br> Можите да се логирате <a href=https://e-library-test-mk.azurewebsites.net/userlogin.aspx >овде</a>");
+
                     mn.IsBodyHtml = true;
                     SmtpClient sm = new SmtpClient();
                     sm.Host = "smtp.gmail.com";

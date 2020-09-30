@@ -43,7 +43,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="Images/imgs/managment.png" />
+                           <img width="100px" src="Images/imgs/management.png" />
                         </center>
                      </div>
                   </div>

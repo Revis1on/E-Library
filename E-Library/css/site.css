@@ -1,4 +1,29 @@
 ﻿
+.expand-collapse {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+    .expand-collapse p {
+        background-color: #dfe60a;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .expand-collapse div {
+        padding: 0;
+        margin: -2px 0 0 0;
+    }
+
+    .expand-collapse h3 {
+        background-color: #ccc;
+        cursor: pointer;
+        padding: 20px;
+        margin: 0 0 2px;
+    }
+
+
+
 .popup {
     display: -webkit-box;
     display: flex;

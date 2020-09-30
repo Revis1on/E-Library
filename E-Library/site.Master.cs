@@ -102,6 +102,11 @@ namespace E_Library
             Response.Redirect("userlogin.aspx");
 
         }
+
+        protected void LinkButton8_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("howitworks.aspx");
+        }
     }
 
 }

@@ -338,6 +338,7 @@
     <Content Include="assets\js\vendor\modernizr-3.5.0.min.js" />
     <Content Include="assets\js\waypoints.min.js" />
     <Content Include="assets\js\wow.min.js" />
+    <Content Include="book_inventory\guide.png" />
     <Content Include="Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Bootstrap\css\bootstrap-reboot.css" />
@@ -2022,6 +2023,7 @@
     <Content Include="forgothpassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="homepage.aspx" />
+    <Content Include="howitworks.aspx" />
     <Content Include="Images\icons\book-lent.png" />
     <Content Include="Images\icons\favicon.ico" />
     <Content Include="Images\books\b1.jpg" />
@@ -2030,22 +2032,24 @@
     <Content Include="Images\books\b4.jpg" />
     <Content Include="Images\books\b5.jpg" />
     <Content Include="Images\imgs\add-group.png" />
-    <Content Include="Images\imgs\adminuser.png" />
+    <Content Include="Images\imgs\bookManual_1.png" />
     <Content Include="Images\imgs\books.png" />
-    <Content Include="book_inventory\books1.png" />
     <Content Include="Images\imgs\defaulters-list.png" />
     <Content Include="Images\imgs\forgot.png" />
     <Content Include="Images\imgs\generaluser.png" />
-    <Content Include="Images\imgs\library.png" />
+    <Content Include="Images\imgs\loginManual.png" />
     <Content Include="Images\imgs\LogoBook.png" />
     <Content Include="Images\imgs\management.png" />
     <Content Include="Images\imgs\message.png" />
+    <Content Include="Images\imgs\orderManual.png" />
+    <Content Include="Images\imgs\profileManual.png" />
     <Content Include="Images\imgs\publisher.png" />
-    <Content Include="Images\imgs\sign-up.png" />
+    <Content Include="Images\imgs\registerManual.png" />
     <Content Include="Images\imgs\writer.png" />
     <Content Include="Images\books\LentBook.png" />
     <Content Include="jss\site.js" />
     <Content Include="lentbook.aspx" />
+    <Content Include="rules.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="userprofile.aspx" />
     <Content Include="usersignup.aspx" />
@@ -2126,6 +2130,13 @@
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="howitworks.aspx.cs">
+      <DependentUpon>howitworks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="howitworks.aspx.designer.cs">
+      <DependentUpon>howitworks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="lentbook.aspx.cs">
       <DependentUpon>lentbook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2134,6 +2145,13 @@
       <DependentUpon>lentbook.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rules.aspx.cs">
+      <DependentUpon>rules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rules.aspx.designer.cs">
+      <DependentUpon>rules.aspx</DependentUpon>
+    </Compile>
     <Compile Include="site.Master.cs">
       <DependentUpon>site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
