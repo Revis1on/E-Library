@@ -56,12 +56,7 @@ namespace E_Library
             Response.Redirect("usersignup.aspx");
         }
 
-        //Кнги//
-        protected void LinkButton4_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("viewbooks.aspx");
-                
-        }
+
         //Одјава//
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
@@ -91,22 +86,7 @@ namespace E_Library
         {
 
         }
-        protected void LinkButton6_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("https://elibforum.azurewebsites.net");
-        }
 
-
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("userlogin.aspx");
-
-        }
-
-        protected void LinkButton8_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("howitworks.aspx");
-        }
     }
 
 }

@@ -2,6 +2,8 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 using System.Web.UI.WebControls;
 
 
@@ -48,6 +50,7 @@ namespace E_Library
                 else
                 {
                     issueBook();
+                    notifuUser();
                 }
 
             }
@@ -290,6 +293,66 @@ namespace E_Library
             }
         }
 
-        
+
+
+
+
+        void notifuUser()
+        {
+
+
+
+            //Response.Write("<script>alert('Testing');</script>");
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("Select email from member_master_tbl where member_id='" + TextBox2.Text.Trim() + "' ", con); ;
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    string email = dr["email"].ToString();
+                    string name = TextBox3.Text;
+                    string bookname = TextBox4.Text;
+                    string startdate = TextBox5.Text;
+                    string duedate = TextBox6.Text;
+
+                    MailMessage mn = new MailMessage("elibrarytestmail@gmail.com", email);
+                    mn.Subject = "Издадена Книга";
+                    mn.Body = string.Format("Здраво: " + name + "  <br> Сакаме да ве известиме дека барањето за изнајмување на книгата " + bookname + " е одборено <br> " +
+                   "Книгата е издадена во период од  "+startdate+" до "+duedate+" <br> Книгата ќе ви биде испорачана за 2-3 бизнис денови <br> " +
+                   "Можите да се логирате <a href=https://e-library-test-mk.azurewebsites.net/userlogin.aspx >овде</a>");
+
+                    mn.IsBodyHtml = true;
+                    SmtpClient sm = new SmtpClient();
+                    sm.Host = "smtp.gmail.com";
+                    sm.EnableSsl = true;
+                    NetworkCredential nc = new NetworkCredential();
+                    nc.UserName = "elibrarytestmail@gmail.com";
+                    nc.Password = "mekaStolica1";
+                    sm.UseDefaultCredentials = false;
+                    sm.Credentials = nc;
+                    sm.Port = 587;
+                    sm.Send(mn);
+                   
+
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
+
+
+
     }
 }
