@@ -166,10 +166,10 @@
                           <label>Лозинка<span class="text-danger">*</span></label>
                           <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Внесете лозинка" TextMode="Password" data-toggle="tooltip" data-placement="top" ToolTip="Лозинката минимум треба да содржо 6 карактери"></asp:TextBox>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="TextBox9" class="text-danger" ErrorMessage="Потребно е ова поле" Display="Dynamic"></asp:RequiredFieldValidator> 
+                              <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="TextBox9" class="text-danger" ErrorMessage="Лозинката мора да биди минимум од 6 карактери и максимум до 20" MinimumValue="6" MaximumValue="20" Type="Integer"></asp:RangeValidator>
                               
-                              <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="TextBox9" ErrorMessage="Лозинката мора да биди минимум од 6 карактери и максимум од 20" MinimumValue="6" MaximumValue="20" Type="Integer"></asp:RangeValidator>
-                              
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="TextBox9" class="text-danger" ErrorMessage="Потребно е ова поле" Display="Dynamic"></asp:RequiredFieldValidator> 
+                            
                             
                         </div>
 
@@ -178,8 +178,9 @@
                           <label>Потврди Лозинка<span class="text-danger">*</span></label>
                               <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Внесете лозинка" TextMode="Password" data-toggle="tooltip" data-placement="top" ToolTip="Лозинка за вашиот кориснички профил"></asp:TextBox>
+                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" class="text-danger" ControlToValidate="TextBox10" ErrorMessage="Потребно е ова поле" Display="Dynamic"></asp:RequiredFieldValidator>
                             <asp:CompareValidator ID="CompareValidator1" runat="server" class="text-danger" ErrorMessage="Лозинките не се исти" ControlToCompare="TextBox9" ControlToValidate="TextBox10" Display="Dynamic"></asp:CompareValidator>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" class="text-danger" ControlToValidate="TextBox10" ErrorMessage="Потребно е ова поле" Display="Dynamic"></asp:RequiredFieldValidator>
+                             
 
                         </div>
 

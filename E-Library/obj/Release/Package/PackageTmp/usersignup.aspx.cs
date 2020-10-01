@@ -88,7 +88,7 @@ namespace E_Library
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                Label1.Text = "Регистрацијате е успешна ";
+                Label1.Text = "Регистрацијатa е успешна ";
                 Label1.ForeColor = Color.Green;
             }
             catch (Exception ex)
